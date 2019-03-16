@@ -1,0 +1,37 @@
+{
+  "name": "composing-sw",
+  "version": "0.0.1",
+  "description": "Some JavaScript composing-sw",
+  "main": "app/app.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node ./app/app.js",
+    "test": "./node_modules/.bin/mocha --compilers js:@babel/register --recursive ./app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poulzinho/composing-sw.git"
+  },
+  "keywords": [
+    "javascript",
+    "puzzles",
+    "mocha"
+  ],
+  "author": "poulzinho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/poulzinho/composing-sw/issues"
+  },
+  "homepage": "https://github.com/poulzinho/composing-sw#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/register": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9"
+  }
+}
