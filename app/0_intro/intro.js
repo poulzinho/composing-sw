@@ -16,5 +16,15 @@ export default {
 
     shiftToLast(head, ...tail) {
         return [...tail, head];
+    },
+
+    greaterThan(x) {
+        return (n) => n >= x;
+    },
+
+    curry(f, arr = []) {
+        return (...args) => (
+            a => a.length === f.length ? f(...a) : curry(f, a)
+        )([...arr, ...args]);
     }
 }
