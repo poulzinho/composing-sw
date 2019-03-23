@@ -1,6 +1,6 @@
 export default {
 
-    calculate (value) {
+    calculate(value) {
 
         const compose = (f, g) => x => f(g(x));
 
@@ -8,5 +8,13 @@ export default {
         const increment = n => n + 1;
 
         return compose(double, increment)(value);
+    },
+
+    tail(head, ...tail) {
+        return tail
+    },
+
+    shiftToLast(head, ...tail) {
+        return [...tail, head];
     }
 }
