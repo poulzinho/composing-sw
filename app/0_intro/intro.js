@@ -36,5 +36,12 @@ export default {
         });
 
         return accumulator;
+    },
+
+    filter(fn, array) {
+        return this.reduce((accumulator, current) =>
+                (fn(current) ? accumulator.concat([current]) : accumulator),
+            [], array
+        )
     }
 }

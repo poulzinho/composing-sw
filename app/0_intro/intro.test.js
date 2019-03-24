@@ -34,4 +34,9 @@ describe("Intro", () => {
         expect(_.reduce(myReducer, 0, [1, 2, 3])).to.equal(6);
     });
 
+    it("should filter", () => {
+        const array = [1, 2, 3, 4, 5];
+        expect(_.filter((n) => n > 2, array)).to.eql([3, 4, 5]);
+    });
+
 });
