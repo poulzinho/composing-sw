@@ -26,5 +26,15 @@ export default {
         return (...args) => (
             a => a.length === f.length ? f(...a) : curry(f, a)
         )([...arr, ...args]);
+    },
+
+    reduce(reducer, initial, array) {
+        let accumulator = initial;
+
+        array.forEach((x) => {
+            accumulator = reducer(accumulator, x);
+        });
+
+        return accumulator;
     }
 }

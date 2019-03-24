@@ -28,4 +28,10 @@ describe("Intro", () => {
         const add3 = _.curry((a, b, c) => a + b + c);
         expect(add3(1, 2, 3)).to.equal(6);
     });
+
+    it("should reduce", () => {
+        const myReducer = (acc, curr) => acc + curr;
+        expect(_.reduce(myReducer, 0, [1, 2, 3])).to.equal(6);
+    });
+
 });
