@@ -39,4 +39,9 @@ describe("Intro", () => {
         expect(_.filter((n) => n > 2, array)).to.eql([3, 4, 5]);
     });
 
+    it("should add", () => {
+        const addFn = _.add();
+        expect(addFn(2)(3)).to.equal(5);
+    });
+
 });

@@ -43,5 +43,9 @@ export default {
                 (fn(current) ? accumulator.concat([current]) : accumulator),
             [], array
         )
+    },
+
+    add() {
+        return a => b => a + b;
     }
 }
