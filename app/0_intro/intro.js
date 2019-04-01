@@ -1,51 +1,51 @@
-export default {
+class Intro {
 
-    calculate(value) {
+    constructor() {
+    }
 
-        const compose = (f, g) => x => f(g(x));
+    _ = {
 
-        const double = n => n * 2;
-        const increment = n => n + 1;
+        compose: (f, g) => x => f(g(x)),
 
-        return compose(double, increment)(value);
-    },
+        double: n => n * 2,
 
-    tail(head, ...tail) {
-        return tail
-    },
+        inc: n => n + 1,
 
-    shiftToLast(head, ...tail) {
-        return [...tail, head];
-    },
+        calculate: (value) => this._.compose(this._.double, this._.increment)(value),
 
-    greaterThan(x) {
-        return (n) => n >= x;
-    },
+        tail: (head, ...tail) => tail,
 
-    curry(f, arr = []) {
-        return (...args) => (
-            a => a.length === f.length ? f(...a) : curry(f, a)
-        )([...arr, ...args]);
-    },
+        shiftToLast: (head, ...tail) => [...tail, head],
 
-    reduce(reducer, initial, array) {
-        let accumulator = initial;
+        greaterThan: (x) => (n) => n >= x,
 
-        array.forEach((x) => {
-            accumulator = reducer(accumulator, x);
-        });
+        curry: (f, arr = []) => (...args) =>
+            (
+                a => a.length === f.length ? f(...a) : curry(f, a)
+            )
+            ([...arr, ...args]),
 
-        return accumulator;
-    },
+        reduce: (reducer, initial, array) => {
+            let accumulator = initial;
 
-    filter(fn, array) {
-        return this.reduce((accumulator, current) =>
+            array.forEach((x) => {
+                accumulator = reducer(accumulator, x);
+            });
+
+            return accumulator;
+        },
+
+        filter: (fn, array) => this._.reduce((accumulator, current) =>
                 (fn(current) ? accumulator.concat([current]) : accumulator),
             [], array
-        )
-    },
+        ),
 
-    add() {
-        return a => b => a + b;
+        add: a => b => a + b,
+
+        increment: (x) => this._.add(1)(x)
+
     }
+
 }
+
+export default new Intro()._;

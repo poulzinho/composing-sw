@@ -40,8 +40,11 @@ describe("Intro", () => {
     });
 
     it("should add", () => {
-        const addFn = _.add();
-        expect(addFn(2)(3)).to.equal(5);
+        expect(_.add(2)(3)).to.equal(5);
+    });
+
+    it("should increment a number by 1", () => {
+        expect(_.increment(3)).to.equal(4);
     });
 
 });
