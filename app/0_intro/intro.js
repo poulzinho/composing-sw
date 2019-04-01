@@ -42,7 +42,9 @@ class Intro {
 
         add: a => b => a + b,
 
-        increment: (x) => this._.add(1)(x)
+        increment: (x) => this._.add(1)(x),
+
+        inc10: (x) => this._.add(10)(x),
 
     }
 

@@ -47,4 +47,8 @@ describe("Intro", () => {
         expect(_.increment(3)).to.equal(4);
     });
 
+    it("should increment a number by 10", () => {
+        expect(_.inc10(3)).to.equal(13);
+    });
+
 });
