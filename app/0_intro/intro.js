@@ -46,6 +46,8 @@ class Intro {
 
         inc10: (x) => this._.add(10)(x),
 
+        compose2: (...fns) => x => fns.reduceRight((y, f) => f(y), x)
+
     }
 
 }

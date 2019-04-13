@@ -51,4 +51,11 @@ describe("Intro", () => {
         expect(_.inc10(3)).to.equal(13);
     });
 
+    it("should compose with multiple functions", () => {
+        const g = n => n + 1;
+        const f = n => n * 2;
+        const h = _.compose2(f, g);
+        expect(h(20)).to.equal(42);
+    })
+
 });
