@@ -68,6 +68,8 @@ class Intro {
 
         map: f => arr => arr.map(f),
 
+        summingReducer: (acc, n) => acc + n,
+
     }
 
 }

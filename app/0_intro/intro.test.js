@@ -107,6 +107,10 @@ describe("Intro", () => {
         const doubled = doubleAll([2, 4, 6]);
 
         expect(doubled).to.eql([4, 8, 12]);
-    })
+    });
+
+    it("should reduce by summing up", () => {
+        expect([2, 4, 6].reduce(_.summingReducer, 0)).to.equal(12);
+    });
 
 });
