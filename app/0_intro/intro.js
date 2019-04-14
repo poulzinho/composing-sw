@@ -64,7 +64,9 @@ class Intro {
         trace2: value => label => {
             console.log(`${label}: ${value}`);
             return value;
-        }
+        },
+
+        map: f => arr => arr.map(f),
 
     }
 

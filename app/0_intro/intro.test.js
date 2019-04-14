@@ -101,4 +101,12 @@ describe("Intro", () => {
         expect(h(20)).to.equal(42)
     });
 
+    it("should map functions", () => {
+        const f = n => n * 2;
+        const doubleAll = _.map(f);
+        const doubled = doubleAll([2, 4, 6]);
+
+        expect(doubled).to.eql([4, 8, 12]);
+    })
+
 });
