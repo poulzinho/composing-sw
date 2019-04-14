@@ -73,7 +73,6 @@ describe("Intro", () => {
     });
 
     it("should pipe functions preserving order top-to-bottom", () => {
-
         const g = n => n + 1;
         const f = n => n * 2;
 
@@ -82,6 +81,21 @@ describe("Intro", () => {
             _.trace('after g'),
             f,
             _.trace('after f'),
+        );
+
+        expect(h(20)).to.equal(42)
+    });
+
+    it("should flip functions", () => {
+        const flippedTrace = _.flip(_.trace2);
+        const g = n => n + 1;
+        const f = n => n * 2;
+
+        const h =_.pipe(
+            g,
+            flippedTrace('after g'),
+            f,
+            flippedTrace('after f'),
         );
 
         expect(h(20)).to.equal(42)
