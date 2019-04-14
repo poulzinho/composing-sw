@@ -51,7 +51,9 @@ class Intro {
         trace: label => value => {
             console.log(`${label}: ${value}`);
             return value;
-        }
+        },
+
+        pipe: (...fns) => x => fns.reduce((y, f) => f(y), x),
 
     }
 

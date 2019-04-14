@@ -72,4 +72,19 @@ describe("Intro", () => {
         expect(h(20)).to.equal(42)
     });
 
+    it("should pipe functions preserving order top-to-bottom", () => {
+
+        const g = n => n + 1;
+        const f = n => n * 2;
+
+        const h =_.pipe(
+            g,
+            _.trace('after g'),
+            f,
+            _.trace('after f'),
+        );
+
+        expect(h(20)).to.equal(42)
+    });
+
 });
