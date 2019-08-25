@@ -1,4 +1,4 @@
-class Intro {
+class Hof {
 
     constructor() {
     }
@@ -10,6 +10,10 @@ class Intro {
         double: n => n * 2,
 
         inc: n => n + 1,
+
+        add: a => b => a + b,
+
+        increment: (x) => this._.add(1)(x),
 
         calculate: (value) => this._.compose(this._.double, this._.increment)(value),
 
@@ -40,38 +44,8 @@ class Intro {
             [], array
         ),
 
-        add: a => b => a + b,
-
-        increment: (x) => this._.add(1)(x),
-
-        inc10: (x) => this._.add(10)(x),
-
-        compose2: (...fns) => x => fns.reduceRight((y, f) => f(y), x),
-
-        /**
-         * it is advisable to put the specializing param first,
-         * and the data the function will act on the last
-         **/
-        trace: label => value => {
-            console.log(`${label}: ${value}`);
-            return value;
-        },
-
-        pipe: (...fns) => x => fns.reduce((y, f) => f(y), x),
-
-        flip: fn => a => b => fn(b)(a),
-
-        trace2: value => label => {
-            console.log(`${label}: ${value}`);
-            return value;
-        },
-
-        map: f => arr => arr.map(f),
-
-        summingReducer: (acc, n) => acc + n,
-
     }
 
 }
 
-export default new Intro()._;
+export default new Hof()._;
