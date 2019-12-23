@@ -1,15 +1,17 @@
 {
   "name": "composing-sw",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "Some JavaScript composing-sw",
   "main": "app/app.js",
   "scripts": {
     "start": "nodemon --exec babel-node ./app/app.js",
-    "test": "./node_modules/.bin/mocha --compilers js:@babel/register --recursive ./app"
+    "test": "./node_modules/.bin/mocha --compilers js:@babel/register --recursive ./app",
+    "tdd": "./node_modules/.bin/mocha --compilers js:@babel/register --recursive --watch ./app",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/poulzinho/composing-sw.git"
+    "url": "https://github.com/poulzinho/composing-sw.git"
   },
   "keywords": [
     "javascript",
@@ -30,9 +32,21 @@
     "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/preset-env": "^7.2.3",
     "@babel/register": "^7.0.0",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@semantic-release/changelog": "^3.0.6",
+    "@semantic-release/git": "^7.0.18",
     "babel-core": "^6.26.3",
     "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "husky": "^3.1.0",
     "mocha": "^5.2.0",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.9",
+    "semantic-release": "^15.14.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
