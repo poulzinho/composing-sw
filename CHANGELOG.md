@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/poulzinho/composing-sw/compare/v1.3.0...v1.4.0) (2019-12-23)
+
+
+### Features
+
+* **ch01:** add a pipe for composing functions and debugging ([79fba33](https://github.com/poulzinho/composing-sw/commit/79fba33d84b5cdf4d44d6a11b368761a9b7d12bf))
+
 # [1.3.0](https://github.com/poulzinho/composing-sw/compare/v1.2.0...v1.3.0) (2019-12-23)
 
 
