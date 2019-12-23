@@ -4,7 +4,9 @@ export const multiplyBy2 = (x) => x * 2;
 
 export const doStuff = (x) => {
     const afterAdd1 = add1(x);
+    console.log(`afterAdd1: ${afterAdd1}`);
     const afterMultiplyBy2 = multiplyBy2(afterAdd1);
+    console.log(`afterMultiplyBy2: ${afterMultiplyBy2}`);
     return afterMultiplyBy2;
 };
 

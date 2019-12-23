@@ -1,4 +1,5 @@
-import {expect} from "chai"
+import {assert, expect} from "chai";
+import {spy} from 'sinon';
 import {add1, doStuff, doStuffAsync, doStuffBetter, multiplyBy2, wait} from './1.1_function-composition';
 
 describe("Function Composition, apply a function to the output of another function", () => {
@@ -38,5 +39,13 @@ describe("Function Composition, apply a function to the output of another functi
 
     it("should doStuff better (one-liner)", () => {
         expect(doStuffBetter(20)).to.equal(42);
+    });
+
+    it("should allow doStuff to be debuggable", () => {
+        spy(console, 'log');
+        expect(doStuff(20)).to.equal(42);
+        assert(console.log.calledWith('afterAdd1: 21'), 'It is not afterAdd1: 21');
+        assert(console.log.calledWith('afterMultiplyBy2: 42'), 'It is not afterMultiplyBy2: 42');
+        console.log.restore();
     })
 });
