@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/poulzinho/composing-sw/compare/v1.2.0...v1.3.0) (2019-12-23)
+
+
+### Features
+
+* **ch01:** allow function composition to be debuggable ([b0f003e](https://github.com/poulzinho/composing-sw/commit/b0f003e7305ce7355a37800a05834e8b054fd102))
+
 # [1.2.0](https://github.com/poulzinho/composing-sw/compare/v1.1.0...v1.2.0) (2019-12-23)
 
 
