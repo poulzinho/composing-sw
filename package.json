@@ -2,11 +2,10 @@
   "name": "composing-sw",
   "version": "0.0.0-development",
   "description": "Some JavaScript composing-sw",
-  "main": "app/app.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "nodemon --exec babel-node ./app/app.js",
-    "test": "./node_modules/.bin/mocha --compilers js:@babel/register --recursive ./app",
-    "tdd": "./node_modules/.bin/mocha --compilers js:@babel/register --recursive --watch ./app",
+    "test": "./node_modules/.bin/mocha --compilers js:@babel/register --recursive ./src",
+    "tdd": "./node_modules/.bin/mocha --compilers js:@babel/register --recursive --watch ./src",
     "semantic-release": "semantic-release"
   },
   "repository": {
