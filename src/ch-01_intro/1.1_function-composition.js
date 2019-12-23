@@ -2,17 +2,23 @@ export const add1 = (x) => x + 1;
 
 export const multiplyBy2 = (x) => x * 2;
 
-export const doStuff = (x) => {
-    const afterAdd1 = add1(x);
-    _trace('afterAdd1')(afterAdd1);
-    const afterMultiplyBy2 = multiplyBy2(afterAdd1);
-    _trace('afterMultiplyBy2')(afterMultiplyBy2);
-    return afterMultiplyBy2;
-};
+export const doStuff = _pipe(
+    add1,
+    _trace('afterAdd1'),
+    multiplyBy2,
+    _trace('afterMultiplyBy2')
+);
 
-const _trace = label => value => {
-    console.log(`${label}: ${value}`);
-};
+function _trace(label) {
+    return value => {
+        console.log(`${label}: ${value}`);
+        return value;
+    };
+}
+
+function _pipe(...fns) {
+    return x => fns.reduce((y, f) => f(y), x);
+}
 
 export const wait = (time) => new Promise((resolve) => setTimeout(resolve, time));
 
