@@ -1,5 +1,5 @@
 import {expect} from "chai"
-import {add1, multiplyBy2, doStuff, doStuffAsync, wait} from './1.1_function-composition';
+import {add1, doStuff, doStuffAsync, doStuffBetter, multiplyBy2, wait} from './1.1_function-composition';
 
 describe("Function Composition, apply a function to the output of another function", () => {
     it("should add 1 to a number", () => {
@@ -34,5 +34,9 @@ describe("Function Composition, apply a function to the output of another functi
             expect(result).to.equal(42);
             done();
         })
+    });
+
+    it("should doStuff better (one-liner)", () => {
+        expect(doStuffBetter(20)).to.equal(42);
     })
 });

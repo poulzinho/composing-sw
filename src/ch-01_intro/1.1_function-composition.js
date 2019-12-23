@@ -13,3 +13,5 @@ export const wait = (time) => new Promise((resolve) => setTimeout(resolve, time)
 export const doStuffAsync = (x, time) => new Promise((resolve) => {
     setTimeout(() => resolve(doStuff(x)), time);
 });
+
+export const doStuffBetter = x => multiplyBy2(add1(x));
