@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/poulzinho/composing-sw/compare/v1.1.0...v1.2.0) (2019-12-23)
+
+
+### Features
+
+* **ch01:** add a one-liner composition function ([3c832f8](https://github.com/poulzinho/composing-sw/commit/3c832f896c4b396867c82f90af6c58f132e5a48f))
+
 # [1.1.0](https://github.com/poulzinho/composing-sw/compare/v1.0.0...v1.1.0) (2019-12-23)
 
 
