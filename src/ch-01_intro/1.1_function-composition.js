@@ -7,3 +7,9 @@ export const doStuff = (x) => {
     const afterMultiplyBy2 = multiplyBy2(afterAdd1);
     return afterMultiplyBy2;
 };
+
+export const wait = (time) => new Promise((resolve) => setTimeout(resolve, time));
+
+export const doStuffAsync = (x, time) => new Promise((resolve) => {
+    setTimeout(() => resolve(doStuff(x)), time);
+});

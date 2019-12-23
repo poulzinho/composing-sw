@@ -1,5 +1,5 @@
 import {expect} from "chai"
-import {add1, multiplyBy2, doStuff} from './1.1_function-composition';
+import {add1, multiplyBy2, doStuff, doStuffAsync, wait} from './1.1_function-composition';
 
 describe("Function Composition, apply a function to the output of another function", () => {
     it("should add 1 to a number", () => {
@@ -17,4 +17,22 @@ describe("Function Composition, apply a function to the output of another functi
     it("should add 1 to a number and then multiply the result by 2 using the function doStuff", () => {
         expect(doStuff(20)).to.equal(42);
     });
+
+    it("should compose functions with a promise chain", (done) => {
+        wait(300)
+            .then(() => 20)
+            .then(add1)
+            .then(multiplyBy2)
+            .then((result) => {
+                expect(result).to.equal(42);
+                done();
+            })
+    });
+
+    it("should doStuff asynchronously", (done) => {
+        doStuffAsync(20, 300).then((result) => {
+            expect(result).to.equal(42);
+            done();
+        })
+    })
 });
