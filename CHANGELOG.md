@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/poulzinho/composing-sw/compare/v1.5.0...v1.6.0) (2019-12-26)
+
+
+### Features
+
+* **ch02:** add functional programming DAO ([64164fa](https://github.com/poulzinho/composing-sw/commit/64164fa7111d713b1447ed5dd9c00ac6bf066348))
+
 # [1.5.0](https://github.com/poulzinho/composing-sw/compare/v1.4.0...v1.5.0) (2019-12-26)
 
 
