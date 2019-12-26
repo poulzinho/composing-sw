@@ -1,6 +1,6 @@
 import {assert, expect} from "chai";
 import {spy} from 'sinon';
-import {add1, doStuff, doStuffAsync, doStuffBetter, multiplyBy2, wait} from './1.1_function-composition';
+import {add1, doStuff, doStuffAsync, doStuffBetter, mixin, multiplyBy2, wait} from './1.1_function-composition';
 
 describe("Function Composition, apply a function to the output of another function", () => {
     before(() => {
@@ -54,4 +54,18 @@ describe("Function Composition, apply a function to the output of another functi
         assert(console.log.calledWith('afterAdd1: 21'), 'It is not afterAdd1: 21');
         assert(console.log.calledWith('afterMultiplyBy2: 42'), 'It is not afterMultiplyBy2: 42');
     })
+});
+
+describe("Object Composition", () => {
+    it("should allow object concatenation aka mixin composition", () => {
+        const a = {
+            a: "a"
+        };
+
+        const b = {
+            b: "b"
+        };
+
+        expect(mixin(a, b)).to.deep.equal({a: "a", b: "b"});
+    });
 });

@@ -27,3 +27,7 @@ export const doStuffAsync = (x, time) => new Promise((resolve) => {
 });
 
 export const doStuffBetter = x => multiplyBy2(add1(x));
+
+export const mixin = (...objects) => {
+    return objects.reduce((mixedObj, object) => ({...mixedObj, ...object}), {});
+};
