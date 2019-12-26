@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/poulzinho/composing-sw/compare/v1.4.0...v1.5.0) (2019-12-26)
+
+
+### Features
+
+* **ch01:** add object concatenation aka mixin composition ([16b56dc](https://github.com/poulzinho/composing-sw/commit/16b56dc0798e76b02782a00d55960ba0f6568ca7))
+
 # [1.4.0](https://github.com/poulzinho/composing-sw/compare/v1.3.0...v1.4.0) (2019-12-23)
 
 
