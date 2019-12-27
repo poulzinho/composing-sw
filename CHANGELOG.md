@@ -1,3 +1,17 @@
+# [1.7.0](https://github.com/poulzinho/composing-sw/compare/v1.6.0...v1.7.0) (2019-12-27)
+
+
+### Bug Fixes
+
+* **npm:** update dependencies ([78b21a4](https://github.com/poulzinho/composing-sw/commit/78b21a4baa73f02b138376b0b914ce45ca578c5f))
+
+
+### Features
+
+* **ch02:** add functional programming DAO ([64164fa](https://github.com/poulzinho/composing-sw/commit/64164fa7111d713b1447ed5dd9c00ac6bf066348))
+* **ch03:** add a classic function composition ([249a3e8](https://github.com/poulzinho/composing-sw/commit/249a3e8dc5a22a5aea0ab5b19e27f77d872b41ae))
+* **ch04:** add JS and functional programming ([4374790](https://github.com/poulzinho/composing-sw/commit/4374790c117a90cee3eb45920e49f42532bac885))
+
 # [1.6.0](https://github.com/poulzinho/composing-sw/compare/v1.5.0...v1.6.0) (2019-12-26)
 
 
