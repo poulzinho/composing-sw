@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/poulzinho/composing-sw/compare/v1.7.0...v1.7.1) (2019-12-27)
+
+
+### Bug Fixes
+
+* **ch02:** remove unnecessary folder ([1e22d20](https://github.com/poulzinho/composing-sw/commit/1e22d20414fa0878c2ab6efb3a84f53e2a55f7a9))
+
 # [1.7.0](https://github.com/poulzinho/composing-sw/compare/v1.6.0...v1.7.0) (2019-12-27)
 
 
