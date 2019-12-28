@@ -19,4 +19,4 @@ console.log(triple(2)); // 6
 ## Pure Functions
 - Same input, always same output
 - No side effects
-
+- Useful for comparing states
