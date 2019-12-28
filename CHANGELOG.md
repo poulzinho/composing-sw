@@ -1,3 +1,17 @@
+# [1.8.0](https://github.com/poulzinho/composing-sw/compare/v1.7.1...v1.8.0) (2019-12-28)
+
+
+### Bug Fixes
+
+* **ch05:** fix test name ([6579cc0](https://github.com/poulzinho/composing-sw/commit/6579cc0a459597e76feea28b86c36f0958d1a943))
+
+
+### Features
+
+* **ch05:** add example for no side effects ([5c94e6c](https://github.com/poulzinho/composing-sw/commit/5c94e6c8f3fbe616d686538c42f998c8dc1ba38b))
+* **ch05:** add pure functions theory ([c0344c8](https://github.com/poulzinho/composing-sw/commit/c0344c8b127d4a55f85dc52b472aac07ede9eb5b))
+* **ch05:** proof same input same output ([c5b2cc3](https://github.com/poulzinho/composing-sw/commit/c5b2cc3c57cf5c006fb4b69581d09a7826fcbf21))
+
 ## [1.7.1](https://github.com/poulzinho/composing-sw/compare/v1.7.0...v1.7.1) (2019-12-27)
 
 
