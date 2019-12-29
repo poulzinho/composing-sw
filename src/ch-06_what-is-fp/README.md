@@ -69,3 +69,11 @@ FP is a declarative paradigm where logic is expressed without flow control
   'a' + 'b';
   {...a, ...b};
   ```
+## Conclusion
+FP favors:
+- Pure functions over shared state and side-effects
+- Immutability
+- Function composition over imperative flow control
+- Generic utils (many data types) over object methods on located data
+- Declarative over imperative
+- Expressions over statements
