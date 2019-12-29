@@ -1,3 +1,16 @@
+# [1.10.0](https://github.com/poulzinho/composing-sw/compare/v1.9.0...v1.10.0) (2019-12-29)
+
+
+### Features
+
+* **ch06:** add array mapper ([af3e8ad](https://github.com/poulzinho/composing-sw/commit/af3e8ad76bbf1e0fc7b2e80e3ada87c5759d61a5))
+* **ch06:** add conclusions ([e7c0131](https://github.com/poulzinho/composing-sw/commit/e7c0131ea89c54aae300e95e925dad31530a5d05))
+* **ch06:** add declarative vs imperative theory ([4584c54](https://github.com/poulzinho/composing-sw/commit/4584c541f094e17c4792712b9bc26dad20bacf22))
+* **ch06:** add functors example ([43ada3a](https://github.com/poulzinho/composing-sw/commit/43ada3a99660c5f82baa7404f7d23844485b843b))
+* **ch06:** add functors theory ([82827d2](https://github.com/poulzinho/composing-sw/commit/82827d22ef79a2b89b492723cbc6756dda7fb923))
+* **ch06:** add Higher Order Functions theory ([b6af99d](https://github.com/poulzinho/composing-sw/commit/b6af99d5dd048e0a53e6679fc5028e5e8e56bd61))
+* **ch06:** add side effects theory ([3b3c671](https://github.com/poulzinho/composing-sw/commit/3b3c6713c79b794d1b977b5755e6d96d6506896c))
+
 # [1.9.0](https://github.com/poulzinho/composing-sw/compare/v1.8.0...v1.9.0) (2019-12-29)
 
 
