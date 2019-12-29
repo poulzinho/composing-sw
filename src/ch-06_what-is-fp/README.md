@@ -48,3 +48,7 @@ f(g(x))
 - Async flow control (callback, promises, monads)
 - Multi-types utils
 - Partial apps, currying, function compositions
+
+### Functors, List, and Streams
+- Functor Data structure is a mappable container
+- It has an interface to apply a function to the values inside the function
