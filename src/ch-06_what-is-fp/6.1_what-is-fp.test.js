@@ -1,5 +1,5 @@
 import {assert, expect} from "chai";
-import {doubleItem, incItem} from "./6.1_what-is-fp";
+import {doubleItem, doubleMap, incItem} from "./6.1_what-is-fp";
 
 describe("What is Functional Programming", () => {
     it("should avoid mutating shared state", () => {
@@ -29,5 +29,9 @@ describe("What is Functional Programming", () => {
             TypeError,
             "Cannot assign to read only property 'foo' of object '#<Object>'"
         );
-    })
+    });
+
+    it("should encourage the usage of mappers", () => {
+        expect(doubleMap([2, 3, 5])).to.deep.equal([4, 6, 10]);
+    });
 });
