@@ -26,6 +26,5 @@ f(g(x))
 
 * By avoiding shared state, timing and order of function calls do not affect the result
 
-
-
-    
+### Immutability
+- In Objects. One that cannot be modified after its creation.
