@@ -19,6 +19,7 @@
 ```
 f(g(x))
 ```
+over an imperative flow control.
 
 ### Shared State
 - Race condition
@@ -52,3 +53,19 @@ f(g(x))
 ### Functors, List, and Streams
 - Functor Data structure is a mappable container
 - It has an interface to apply a function to the values inside the function
+
+### Declarative vs Imperative
+
+FP is a declarative paradigm where logic is expressed without flow control
+
+- Imperative.- How to do things
+    - Uses statements (for, if, switch, throw, etc...)
+- Declarative.-  What to do
+    - Relies more on expressions which evaluates to some value.
+    ```
+  2 * 2;
+  doubleMap([2, 4]);
+  Math.max(4, 5, 1);
+  'a' + 'b';
+  {...a, ...b};
+  ```
