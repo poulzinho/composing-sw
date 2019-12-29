@@ -16,5 +16,5 @@ describe("Pure Functions", () => {
         const newCart = addToCart(originalCart, {name: "product A"}, 3);
 
         expect(originalCart).to.be.not.deep.equal(newCart);
-    })
+    });
 });
