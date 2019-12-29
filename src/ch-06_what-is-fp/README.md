@@ -38,3 +38,13 @@ f(g(x))
 - Writing to screen, file, network
 - Trigger external processes
 - Call other functions with side-effects
+
+### Higher Order Functions
+- Take functions as arguments
+- Returns a function
+- Both above
+
+#### Usages
+- Async flow control (callback, promises, monads)
+- Multi-types utils
+- Partial apps, currying, function compositions
