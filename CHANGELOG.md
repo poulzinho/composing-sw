@@ -1,3 +1,12 @@
+# [1.9.0](https://github.com/poulzinho/composing-sw/compare/v1.8.0...v1.9.0) (2019-12-29)
+
+
+### Features
+
+* **ch06:** add example of immutable object ([61cad87](https://github.com/poulzinho/composing-sw/commit/61cad8745be1648cb14d1c7d11d2ce2ed39cce16))
+* **ch06:** add functional programming theory ([1739237](https://github.com/poulzinho/composing-sw/commit/1739237327c8f757acd39192dd854f7790d71b8a))
+* **ch06:** add share state immutability example ([dd3282a](https://github.com/poulzinho/composing-sw/commit/dd3282a8f0fd49f245118ec11bd2e8092398b9b0))
+
 # [1.8.0](https://github.com/poulzinho/composing-sw/compare/v1.7.1...v1.8.0) (2019-12-28)
 
 
