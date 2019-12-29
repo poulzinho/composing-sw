@@ -28,3 +28,13 @@ f(g(x))
 
 ### Immutability
 - In Objects. One that cannot be modified after its creation.
+
+### Side Effects
+- Any state change observed from outside a function. Only the returned value is expected.
+
+#### Examples
+- Change external variables (global variables, object properties)
+- Console logs
+- Writing to screen, file, network
+- Trigger external processes
+- Call other functions with side-effects
