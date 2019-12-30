@@ -51,3 +51,8 @@ const identity = (x = 0) => x;
 ## Rest and Spread
 - Gather a group of remaining arguments in the function signature
 
+## Currying
+- A function that takes multiple params one at a time
+    - Takes a param and returns a function that takes the next param
+    - And so on until all params were supplied
+    - Then the final value is returned

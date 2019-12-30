@@ -76,4 +76,13 @@ describe("Functional Programmer's intro to JS", () => {
         const shiftToLast = (head, ...tail) => [...tail, head];
         expect(shiftToLast(1, 3, 6)).to.deep.equal([3, 6, 1]);
     });
+
+    it("should enable currying", () => {
+        const gte = cutoff => n => n >= cutoff;
+        const gte4 = gte(4);
+
+        expect(gte4).to.be.instanceOf(Function);
+        expect(gte4(6)).to.be.true;
+        expect(gte4(3)).to.be.false;
+    });
 });
