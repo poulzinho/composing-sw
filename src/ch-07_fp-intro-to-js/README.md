@@ -48,4 +48,6 @@ const identity = (x = 0) => x;
 ## Named arguments
 - Use destructuring assignment in the parameter signature
 
+## Rest and Spread
+- Gather a group of remaining arguments in the function signature
 

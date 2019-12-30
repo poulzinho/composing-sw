@@ -66,4 +66,14 @@ describe("Functional Programmer's intro to JS", () => {
             lastName: 'NoLastName'
         })
     });
+
+    it("should gather together in an array a group arguments in the functions signature, tail example", () => {
+        const aTail = (head, ...tail) => tail;
+        expect(aTail(1, 3, 6)).to.deep.equal([3, 6]);
+    });
+
+    it("should gather together in an array a group arguments in the functions signature, shift to last example", () => {
+        const shiftToLast = (head, ...tail) => [...tail, head];
+        expect(shiftToLast(1, 3, 6)).to.deep.equal([3, 6, 1]);
+    });
 });
