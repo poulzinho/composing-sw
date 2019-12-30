@@ -57,3 +57,18 @@ const identity = (x = 0) => x;
     - And so on until all params were supplied
     - Then the final value is returned
 - JS lacks a built-in autocurry
+
+## Function Composition
+- f . g
+- f(g(x))
+
+## Arrays
+- Array is an object with methods and parameter **this** 
+- Methods of the object that take a function as an argument are:
+    - map
+    - reduce
+    - filter, etc
+- **this** value is how map get access to the content of the array
+- the function passed is applied to each item in the array
+
+
