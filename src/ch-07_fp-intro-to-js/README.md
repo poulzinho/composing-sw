@@ -16,3 +16,36 @@ Usually, we use **const** in FP
 - Arrays
 - Objects
 
+## Comparisons and Ternaries
+```
+>
+<
+<=
+>=
+!=
+==
+!==
+===
+&&
+||
+```
+
+## Functions
+- Invoke with function call, that applies to arguments
+- Evaluates and return value
+
+## Signatures
+- Optional function name
+- List of parameter types
+- Type of return value
+
+## Default parameters
+- Assign to parameter in the function signature
+```
+const identity = (x = 0) => x;
+```
+
+## Named arguments
+- Use destructuring assignment in the parameter signature
+
+
