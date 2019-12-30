@@ -1,3 +1,18 @@
+# [1.11.0](https://github.com/poulzinho/composing-sw/compare/v1.10.0...v1.11.0) (2019-12-30)
+
+
+### Features
+
+* **ch07:** add array theory ([0c1b35b](https://github.com/poulzinho/composing-sw/commit/0c1b35ba30923f1bbe238fff8271b8373759854e))
+* **ch07:** add autocurry example ([6c74b35](https://github.com/poulzinho/composing-sw/commit/6c74b3531aecd2a0fd3f76c6668ac7bbc9f03a4b))
+* **ch07:** add chaining methods example ([7e25d4d](https://github.com/poulzinho/composing-sw/commit/7e25d4d062eff4d4497ea2cc5b61387d309448bc))
+* **ch07:** add currying example ([d449cbf](https://github.com/poulzinho/composing-sw/commit/d449cbfbad3d01ae656452448ec17a378da9c577))
+* **ch07:** add examples of array and object destructure ([c896d6d](https://github.com/poulzinho/composing-sw/commit/c896d6da48397aef43e2dfe05c060cdc09f12538))
+* **ch07:** add FP intro to JS theory ([e189886](https://github.com/poulzinho/composing-sw/commit/e189886cd693b779e43d58da32a4816f373481d6))
+* **ch07:** add named arguments examples ([d6444ec](https://github.com/poulzinho/composing-sw/commit/d6444ecab56fc828efd6ed67de21102364c2a070))
+* **ch07:** add rest and spread examples ([319bffb](https://github.com/poulzinho/composing-sw/commit/319bffbfdd69c3881eeb36fa5ad4b11f95738b05))
+* **ch07:** update FP intro to JS theory ([ac6a47a](https://github.com/poulzinho/composing-sw/commit/ac6a47adcda0595e57962906121f512a1c9e40c9))
+
 # [1.10.0](https://github.com/poulzinho/composing-sw/compare/v1.9.0...v1.10.0) (2019-12-29)
 
 
