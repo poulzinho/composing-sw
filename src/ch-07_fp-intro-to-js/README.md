@@ -56,3 +56,4 @@ const identity = (x = 0) => x;
     - Takes a param and returns a function that takes the next param
     - And so on until all params were supplied
     - Then the final value is returned
+- JS lacks a built-in autocurry

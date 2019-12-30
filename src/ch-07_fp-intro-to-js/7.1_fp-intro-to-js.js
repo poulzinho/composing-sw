@@ -10,3 +10,11 @@ export const newUser = ({name = 'NoName', lastName = 'NoLastName'}) => ({
     name,
     lastName,
 });
+
+export const curry = (
+    f, arr = []
+) => (...args) => (
+    a => a.length === f.length
+        ? f(...a)
+        : curry(f, a)
+)([...arr, ...args]);

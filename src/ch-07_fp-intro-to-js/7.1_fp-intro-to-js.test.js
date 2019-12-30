@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import {myReducer, newUser} from "./7.1_fp-intro-to-js";
+import {curry, myReducer, newUser} from "./7.1_fp-intro-to-js";
 
 describe("Functional Programmer's intro to JS", () => {
     it("should show how to destructure an array", () => {
@@ -84,5 +84,13 @@ describe("Functional Programmer's intro to JS", () => {
         expect(gte4).to.be.instanceOf(Function);
         expect(gte4(6)).to.be.true;
         expect(gte4(3)).to.be.false;
+    });
+
+    it('should enable autocurrying', () => {
+        const add3 = curry((a, b, c) => a + b + c);
+        expect(add3(1, 2, 3)).to.equal(6);
+        expect(add3(1, 2)(3)).to.equal(6);
+        expect(add3(1)(2, 3)).to.equal(6);
+        expect(add3(1)(2)(3)).to.equal(6);
     });
 });
