@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import {myReducer} from "./7.1_fp-intro-to-js";
+import {myReducer, newUser} from "./7.1_fp-intro-to-js";
 
 describe("Functional Programmer's intro to JS", () => {
     it("should show how to destructure an array", () => {
@@ -44,5 +44,26 @@ describe("Functional Programmer's intro to JS", () => {
         const {foo: bar} = foo;
 
         expect(bar).to.equal('foo');
+    });
+
+    it("should mimic named arguments using destructuring", () => {
+        const marcoPolo = newUser({
+            name: 'Marco',
+            lastName: 'Polo'
+        });
+
+        expect(marcoPolo).to.deep.equal({
+            name: 'Marco',
+            lastName: 'Polo'
+        })
+    });
+
+    it("should mimic named arguments using destructuring and default parameters", () => {
+        const anonymous = newUser({});
+
+        expect(anonymous).to.deep.equal({
+            name: 'NoName',
+            lastName: 'NoLastName'
+        })
     });
 });

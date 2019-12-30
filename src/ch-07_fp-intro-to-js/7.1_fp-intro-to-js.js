@@ -5,3 +5,8 @@ export const myReducer = (state = {}, action = {}) => {
         ? Object.assign({}, state, payload)
         : state
 };
+
+export const newUser = ({name = 'NoName', lastName = 'NoLastName'}) => ({
+    name,
+    lastName,
+});
