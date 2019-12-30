@@ -71,4 +71,8 @@ const identity = (x = 0) => x;
 - **this** value is how map get access to the content of the array
 - the function passed is applied to each item in the array
 
+## Method Chaining
+- Calling directly a method on the returning value of a function
+- Predicate is a function that return a boolean. .filter() uses a predicate
+- Commons uses are mapping items to a new list
 

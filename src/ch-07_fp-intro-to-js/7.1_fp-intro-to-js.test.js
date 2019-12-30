@@ -93,4 +93,15 @@ describe("Functional Programmer's intro to JS", () => {
         expect(add3(1)(2, 3)).to.equal(6);
         expect(add3(1)(2)(3)).to.equal(6);
     });
+
+    it('should chain methods', () => {
+        const arr = [1, 3, 5];
+        const double = x => x * 2;
+
+        const gte = cutoff => n => n >= cutoff;
+        const gte4 = gte(4);
+
+        expect(arr.map(double).map(double)).to.deep.equal([4, 12, 20]);
+        expect(arr.filter(gte4).map(double)).to.deep.equal([10]);
+    });
 });
