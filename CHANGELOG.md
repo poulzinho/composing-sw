@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/poulzinho/composing-sw/compare/v1.11.0...v1.12.0) (2019-12-31)
+
+
+### Features
+
+* **ch08:** add higher order functions theory and reducer example ([bf59062](https://github.com/poulzinho/composing-sw/commit/bf59062fd19d1b9b2130c945e9bf48a52b655c64))
+
 # [1.11.0](https://github.com/poulzinho/composing-sw/compare/v1.10.0...v1.11.0) (2019-12-30)
 
 
