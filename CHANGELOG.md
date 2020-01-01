@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/poulzinho/composing-sw/compare/v1.12.0...v1.13.0) (2020-01-01)
+
+
+### Features
+
+* **ch08:** add filter hof example ([f6d5d66](https://github.com/poulzinho/composing-sw/commit/f6d5d66eca5551fee9ab9e1c6a53c56a2067cc0b))
+
 # [1.12.0](https://github.com/poulzinho/composing-sw/compare/v1.11.0...v1.12.0) (2019-12-31)
 
 
