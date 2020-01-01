@@ -7,3 +7,11 @@ export const reduce = (reducer, inital, arr) => {
 
     return acc;
 };
+
+export const filter = (fn, arr) => reduce(
+    (acc, curr) => fn(curr)
+        ? acc.concat([curr])
+        : acc,
+    [],
+    arr
+);
