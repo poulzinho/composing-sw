@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/poulzinho/composing-sw/compare/v1.13.0...v1.14.0) (2020-01-04)
+
+
+### Features
+
+* **ch08:** add more high order function examples ([714f8ec](https://github.com/poulzinho/composing-sw/commit/714f8ecc038ce22da1ec7bebc39c867869b101ad))
+
 # [1.13.0](https://github.com/poulzinho/composing-sw/compare/v1.12.0...v1.13.0) (2020-01-01)
 
 
