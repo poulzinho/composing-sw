@@ -24,3 +24,8 @@ Function which was applied to some (but not all) of its arguments.
     - Return a unary function (just takes one arg)
 
 All curried fns return partial apps. However, not all partial apps result from curried fns.
+
+## Point-free style
+- Define functions without declaring formal parameters
+    - function and arrow functions (=>) cannot be used
+    - instead call a function that returns a function with its own closure and fixed variable
