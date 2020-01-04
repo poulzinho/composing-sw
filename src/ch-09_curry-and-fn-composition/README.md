@@ -29,3 +29,6 @@ All curried fns return partial apps. However, not all partial apps result from c
 - Define functions without declaring formal parameters
     - function and arrow functions (=>) cannot be used
     - instead call a function that returns a function with its own closure and fixed variable
+    
+## Why to curry
+- For function composition
