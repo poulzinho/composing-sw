@@ -1,3 +1,13 @@
+# [1.15.0](https://github.com/poulzinho/composing-sw/compare/v1.14.0...v1.15.0) (2020-01-04)
+
+
+### Features
+
+* **ch09:** add curry and function comp theory ([3d91695](https://github.com/poulzinho/composing-sw/commit/3d9169537ffb551f3e5de1a1fa58e4fd76c659ef))
+* **ch09:** add function composition example ([2065387](https://github.com/poulzinho/composing-sw/commit/2065387ce527cee23d0e2d581a4e8f8d4f81b3f5))
+* **ch09:** add partial applications theory ([f7d42d8](https://github.com/poulzinho/composing-sw/commit/f7d42d85691733ed93077f292b51010f5cd50618))
+* **ch09:** add point-free style example ([441a7bd](https://github.com/poulzinho/composing-sw/commit/441a7bdee1c0485a941eb9fc1e492c3cb740139f))
+
 # [1.14.0](https://github.com/poulzinho/composing-sw/compare/v1.13.0...v1.14.0) (2020-01-04)
 
 
