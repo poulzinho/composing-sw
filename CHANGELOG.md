@@ -1,3 +1,11 @@
+# [1.16.0](https://github.com/poulzinho/composing-sw/compare/v1.15.0...v1.16.0) (2020-01-05)
+
+
+### Features
+
+* **ch09:** add function composition of n functions example ([c0b5fc2](https://github.com/poulzinho/composing-sw/commit/c0b5fc2c500fb3865b63c4540d0eebf8a367b171))
+* **ch09:** trace values between functions ([be5ed48](https://github.com/poulzinho/composing-sw/commit/be5ed48534c11d16a14370cea4285a7dd2ec938c))
+
 # [1.15.0](https://github.com/poulzinho/composing-sw/compare/v1.14.0...v1.15.0) (2020-01-04)
 
 
