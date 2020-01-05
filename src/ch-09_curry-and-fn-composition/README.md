@@ -32,3 +32,8 @@ All curried fns return partial apps. However, not all partial apps result from c
     
 ## Why to curry
 - For function composition
+
+## Trace
+How to debug function composition?
+How to inspect the values between fns?
+Trace helps to do that with a curried function

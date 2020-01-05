@@ -1,7 +1,16 @@
-import {expect} from 'chai';
-import {compose, sum} from "./9.1_curry-and-fn-composition";
+import {assert, expect} from 'chai';
+import {compose, sum, trace} from "./9.1_curry-and-fn-composition";
+import {spy} from "sinon";
 
 describe("Curry and Function Composition", () => {
+    before(() => {
+        spy(console, 'log');
+    });
+
+    after(() => {
+        console.log.restore();
+    });
+
     it("should apply two functions in a curried form", () => {
         expect(sum(2)(4)).to.equal(6);
     });
@@ -29,5 +38,21 @@ describe("Curry and Function Composition", () => {
         const h = c => c * 3;
 
         expect(compose(f, g, h)(20)).to.equal(122);
+    });
+
+    it("should allow to trace (inspect values) between functions", () => {
+        const f = a => a * 2;
+        const g = b => b + 1;
+
+        const h = compose(
+            trace("after f"),
+            f,
+            trace("after g"),
+            g
+        );
+
+        expect(h(30)).to.equal(62);
+        assert(console.log.calledWith('after g: 31'), 'It is not after g: 31');
+        assert(console.log.calledWith('after f: 62'), 'It is not after f: 62');
     });
 });
