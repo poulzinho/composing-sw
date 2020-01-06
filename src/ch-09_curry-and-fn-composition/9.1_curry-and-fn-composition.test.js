@@ -1,5 +1,5 @@
 import {assert, expect} from 'chai';
-import {compose, sum, trace} from "./9.1_curry-and-fn-composition";
+import {compose, pipe, sum, trace} from "./9.1_curry-and-fn-composition";
 import {spy} from "sinon";
 
 describe("Curry and Function Composition", () => {
@@ -29,7 +29,7 @@ describe("Curry and Function Composition", () => {
         const composeFn = (f, g) => x => f(g(x));
 
         expect(h(30)).to.equal(62);
-        expect(composeFn(f,g)(30)).to.equal(62);
+        expect(composeFn(f, g)(30)).to.equal(62);
     });
 
     it("should allow function composition of n functions", () => {
@@ -55,4 +55,20 @@ describe("Curry and Function Composition", () => {
         assert(console.log.calledWith('after g: 31'), 'It is not after g: 31');
         assert(console.log.calledWith('after f: 62'), 'It is not after f: 62');
     });
+
+    it("should allow to trace between functions in top-to-bottom order", () => {
+        const f = a => a * 2;
+        const g = b => b + 1;
+
+        const h = pipe(
+            g,
+            trace('after g'),
+            f,
+            trace('after f')
+        );
+
+        expect(h(30)).to.equal(62);
+        assert(console.log.calledWith('after g: 31'), 'It is not after g: 31');
+        assert(console.log.calledWith('after f: 62'), 'It is not after f: 62');
+    })
 });
