@@ -1,3 +1,10 @@
+# [1.17.0](https://github.com/poulzinho/composing-sw/compare/v1.16.0...v1.17.0) (2020-01-06)
+
+
+### Features
+
+* **ch09:** add pipe to trace in top to bottom order ([5bc3a20](https://github.com/poulzinho/composing-sw/commit/5bc3a202e60789d6502013baa41f41c09df87b95))
+
 # [1.16.0](https://github.com/poulzinho/composing-sw/compare/v1.15.0...v1.16.0) (2020-01-05)
 
 
