@@ -1,3 +1,10 @@
+# [1.18.0](https://github.com/poulzinho/composing-sw/compare/v1.17.0...v1.18.0) (2020-01-07)
+
+
+### Features
+
+* **ch09:** use currying for specializing functions, example ([79846dd](https://github.com/poulzinho/composing-sw/commit/79846dda379d73679d775134ef3d8bdcbc3572cb))
+
 # [1.17.0](https://github.com/poulzinho/composing-sw/compare/v1.16.0...v1.17.0) (2020-01-06)
 
 
