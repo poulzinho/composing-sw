@@ -8,3 +8,5 @@ export const trace = label => value => {
 };
 
 export const pipe = (...fns) => x => fns.reduce((acum, f) => f(acum), x);
+
+export const map = fn => mappable => mappable.map(fn);

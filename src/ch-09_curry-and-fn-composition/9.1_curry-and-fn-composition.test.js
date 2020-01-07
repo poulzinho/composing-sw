@@ -1,5 +1,5 @@
 import {assert, expect} from 'chai';
-import {compose, pipe, sum, trace} from "./9.1_curry-and-fn-composition";
+import {compose, map, pipe, sum, trace} from "./9.1_curry-and-fn-composition";
 import {spy} from "sinon";
 
 describe("Curry and Function Composition", () => {
@@ -70,5 +70,17 @@ describe("Curry and Function Composition", () => {
         expect(h(30)).to.equal(62);
         assert(console.log.calledWith('after g: 31'), 'It is not after g: 31');
         assert(console.log.calledWith('after f: 62'), 'It is not after f: 62');
+    });
+
+    it("should specialize functions by currying", () => {
+        const array = [1, 2, 3, 4, 5];
+        const isEven = x => x % 2 === 0;
+
+        const stripe = n => isEven(n) ? 'even' : 'odd';
+
+        const stripeAll = map(stripe);
+        const striped = stripeAll(array);
+
+        expect(striped).to.deep.equal(['odd', 'even', 'odd', 'even', 'odd']);
     })
 });
