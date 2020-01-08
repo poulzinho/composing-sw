@@ -72,7 +72,7 @@ describe("Curry and Function Composition", () => {
         assert(console.log.calledWith('after f: 62'), 'It is not after f: 62');
     });
 
-    it("should specialize functions by currying", () => {
+    it("should specialize functions by currying, stripe example", () => {
         const array = [1, 2, 3, 4, 5];
         const isEven = x => x % 2 === 0;
 
@@ -82,5 +82,15 @@ describe("Curry and Function Composition", () => {
         const striped = stripeAll(array);
 
         expect(striped).to.deep.equal(['odd', 'even', 'odd', 'even', 'odd']);
+    });
+
+    it("should specialize functions by currying, doubles example", () => {
+        const array = [1, 2, 3, 4, 5];
+        const double = x => x * 2;
+
+        const doubleAll = map(double);
+        const doubled = doubleAll(array);
+
+        expect(doubled).to.deep.equal([2, 4, 6, 8, 10]);
     })
 });
