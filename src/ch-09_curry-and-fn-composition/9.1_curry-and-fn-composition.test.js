@@ -1,5 +1,5 @@
 import {assert, expect} from 'chai';
-import {compose, map, pipe, sum, trace} from "./9.1_curry-and-fn-composition";
+import {compose, flip, map, pipe, sum, trace, traceInv} from "./9.1_curry-and-fn-composition";
 import {spy} from "sinon";
 
 describe("Curry and Function Composition", () => {
@@ -72,7 +72,7 @@ describe("Curry and Function Composition", () => {
         assert(console.log.calledWith('after f: 62'), 'It is not after f: 62');
     });
 
-    it("should specialize functions by currying", () => {
+    it("should specialize functions by currying, stripe example", () => {
         const array = [1, 2, 3, 4, 5];
         const isEven = x => x % 2 === 0;
 
@@ -82,5 +82,33 @@ describe("Curry and Function Composition", () => {
         const striped = stripeAll(array);
 
         expect(striped).to.deep.equal(['odd', 'even', 'odd', 'even', 'odd']);
-    })
+    });
+
+    it("should specialize functions by currying, doubles example", () => {
+        const array = [1, 2, 3, 4, 5];
+        const double = x => x * 2;
+
+        const doubleAll = map(double);
+        const doubled = doubleAll(array);
+
+        expect(doubled).to.deep.equal([2, 4, 6, 8, 10]);
+    });
+
+    it("should flip the order of two parameters in an inverse trace function", () => {
+        const f = a => a * 2;
+        const g = b => b + 1;
+
+        const flippedTrace = flip(traceInv);
+
+        const h = pipe(
+            g,
+            flippedTrace('after g'),
+            f,
+            flippedTrace('after f'),
+        );
+
+        expect(h(30)).to.equal(62);
+        assert(console.log.calledWith('after g: 31'), 'It is not after g: 31');
+        assert(console.log.calledWith('after f: 62'), 'It is not after f: 62');
+    });
 });
