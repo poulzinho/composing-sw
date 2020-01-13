@@ -1,3 +1,11 @@
+# [1.19.0](https://github.com/poulzinho/composing-sw/compare/v1.18.0...v1.19.0) (2020-01-13)
+
+
+### Features
+
+* **ch09:** add inverse trace and flip ([d9aeafe](https://github.com/poulzinho/composing-sw/commit/d9aeafe49c74253ce00246f641baba583060768e))
+* **ch09:** specialize functions by currying, doubles example ([ca602ba](https://github.com/poulzinho/composing-sw/commit/ca602ba0bd1e4679dc48103413a8862f4a37a0e1))
+
 # [1.18.0](https://github.com/poulzinho/composing-sw/compare/v1.17.0...v1.18.0) (2020-01-07)
 
 
