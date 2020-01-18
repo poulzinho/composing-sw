@@ -17,3 +17,14 @@ A -> B -> C
 // reduces it down to:
 A -> C
 ```
+
+Good abstractions are:
+- Composable
+- Reusable
+- Independent
+- Concise
+- Simple
+
+## Reduce 
+- Fold
+- Accumulate
