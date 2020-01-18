@@ -1,6 +1,6 @@
 {
   "name": "composing-sw",
-  "version": "1.19.0",
+  "version": "1.20.0",
   "description": "Some JavaScript composing-sw",
   "main": "src/app.js",
   "scripts": {

@@ -1,3 +1,14 @@
+# [1.20.0](https://github.com/poulzinho/composing-sw/compare/v1.19.0...v1.20.0) (2020-01-18)
+
+
+### Features
+
+* **ch10:** add abstraction and composition theory ([00205a4](https://github.com/poulzinho/composing-sw/commit/00205a4917dab1ac6596e311585a6bb3d8108ab3))
+* **ch10:** add map as a curried function ([79e14fb](https://github.com/poulzinho/composing-sw/commit/79e14fb74ab006ebfa320071366fa84828260690))
+* **ch10:** add Reduce theory ([3d1d6ad](https://github.com/poulzinho/composing-sw/commit/3d1d6ad602b073dd90c4551408f670b88ed1c76e))
+* **ch10:** curry the add function ([cd253e9](https://github.com/poulzinho/composing-sw/commit/cd253e9a2526213d5c81a3fb601422653a3a3500))
+* **ch10:** fix a parameter in a function ([5a62be7](https://github.com/poulzinho/composing-sw/commit/5a62be7de45986cfc9cf7d346e84885ff9c75d1d))
+
 # [1.19.0](https://github.com/poulzinho/composing-sw/compare/v1.18.0...v1.19.0) (2020-01-13)
 
 
