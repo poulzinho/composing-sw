@@ -17,7 +17,3 @@ A -> B -> C
 // reduces it down to:
 A -> C
 ```
-
-
-
-
