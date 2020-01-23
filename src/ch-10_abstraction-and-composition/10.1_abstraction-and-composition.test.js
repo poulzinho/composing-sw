@@ -25,4 +25,11 @@ describe("Abstraction and Composition", () => {
 
         expect(doubleAll([1, 4, 8])).to.deep.equal([2, 8, 16]);
     });
+
+    it("should use a reducer to sum all terms", () => {
+        const sumReducer = (acc, n) => acc + n;
+        const terms = [2, 4, 5];
+
+        expect(terms.reduce(sumReducer, 0)).to.equal(11);
+    })
 });
