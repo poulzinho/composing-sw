@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import {add, addN, map, mapRedu} from "./10.1_abstraction_and_composition";
+import {add, addN, filterRed, map, mapRedu} from "./10.1_abstraction_and_composition";
 
 describe("Abstraction and Composition", () => {
     it("should fix a parameter in a function", () => {
@@ -38,5 +38,13 @@ describe("Abstraction and Composition", () => {
         const terms = [1, 2, 3, 4];
 
         expect(mapRedu(by2, terms)).to.deep.equal([2, 4, 6, 8]);
-    })
+    });
+
+    it("should implement a filter using a reducer", () => {
+        const gt5 = (x) => x > 5;
+        const terms = [2, 6, 4, 10];
+
+        expect(filterRed(gt5, terms)).to.deep.equal([6, 10]);
+    });
+
 });
