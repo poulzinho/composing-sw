@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import {add, addN, filterRed, map, mapRedu} from "./10.1_abstraction_and_composition";
+import {add, addN, compose, filterRed, map, mapRedu} from "./10.1_abstraction_and_composition";
 
 describe("Abstraction and Composition", () => {
     it("should fix a parameter in a function", () => {
@@ -45,6 +45,16 @@ describe("Abstraction and Composition", () => {
         const terms = [2, 6, 4, 10];
 
         expect(filterRed(gt5, terms)).to.deep.equal([6, 10]);
+    });
+
+    it("should compose functions using a right to left reducer", () => {
+        const add1 = x => x + 1;
+        const add5 = x => x + 5;
+        const multiplyWith3 = x => x * 3;
+
+        const composedFn = compose(add1, add5, multiplyWith3);
+
+        expect(composedFn(5)).to.equal(21);
     });
 
 });

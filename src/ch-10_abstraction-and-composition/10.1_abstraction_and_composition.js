@@ -11,3 +11,5 @@ export const mapRedu = (fn, arr) => arr.reduce((acc, item) => {
 export const filterRed = (fn, arr) => arr.reduce((acc, item) => {
     return fn(item) ? acc.concat([item]) : acc;
 }, []);
+
+export const compose = (...fns) => x => fns.reduceRight((y, f) => f(y), x);
