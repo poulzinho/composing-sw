@@ -1,3 +1,16 @@
+# [1.21.0](https://github.com/poulzinho/composing-sw/compare/v1.20.0...v1.21.0) (2020-01-25)
+
+
+### Features
+
+* **ch10:** add sum reducer ([fa2396d](https://github.com/poulzinho/composing-sw/commit/fa2396d2ff7fd91ef87ffd8f0ef7e155f0ce3ed0))
+* **ch10:** compose functions with a reducerRight ([686e507](https://github.com/poulzinho/composing-sw/commit/686e5073a19f45be2260bcd6bbdc6dd38e4ece6b))
+* **ch10:** compose functions with a simple reducer, still right to left ([3489341](https://github.com/poulzinho/composing-sw/commit/34893419b46ce02eb8e9b4ee2fb5592b028df022))
+* **ch10:** implement a filter using a reducer ([7878c64](https://github.com/poulzinho/composing-sw/commit/7878c6447904fc32f9fc6de9a130b80e6d77162e))
+* **ch10:** implement a map with a reducer ([8d71d7c](https://github.com/poulzinho/composing-sw/commit/8d71d7c755540065e208612fd380e45285a4cc1c))
+* **ch10:** implement a redux reducer ([5d3bae7](https://github.com/poulzinho/composing-sw/commit/5d3bae7b40a20509ac2a692e5b1f5fa859b82933))
+* **ch10:** pipe functions with a simple reducer, bottom down ([7f9e930](https://github.com/poulzinho/composing-sw/commit/7f9e930be1ce73344ad4efdab58a86d572f45cf2))
+
 # [1.20.0](https://github.com/poulzinho/composing-sw/compare/v1.19.0...v1.20.0) (2020-01-18)
 
 
