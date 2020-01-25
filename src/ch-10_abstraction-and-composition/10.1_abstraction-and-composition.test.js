@@ -1,5 +1,15 @@
 import {expect} from 'chai';
-import {add, addN, compose, composeRight, filterRed, map, mapRedu, pipe} from "./10.1_abstraction_and_composition";
+import {
+    add,
+    ADD_VALUE, addingReducer,
+    addN,
+    compose,
+    composeRight,
+    filterRed,
+    map,
+    mapRedu,
+    pipe
+} from "./10.1_abstraction_and_composition";
 
 describe("Abstraction and Composition", () => {
     it("should fix a parameter in a function", () => {
@@ -76,6 +86,16 @@ describe("Abstraction and Composition", () => {
         const pipedFn = pipe(add1, add5, multiplyWith3);
 
         expect(pipedFn(5)).to.equal(33);
+    });
+
+    it("should implement a redux reducer", () => {
+        const actions = [
+            {type: ADD_VALUE, payload: {value: 1}},
+            {type: ADD_VALUE, payload: {value: 1}},
+            {type: ADD_VALUE, payload: {value: 1}},
+        ];
+
+        expect(actions.reduce(addingReducer, 0)).to.equal(3);
     })
 
 });

@@ -17,3 +17,15 @@ export const compose = (...fns) => x => fns.reduceRight((y, f) => f(y), x);
 export const composeRight = (...fns) => x => fns.reverse().reduce((y, f) => f(y), x);
 
 export const pipe = (...fns) => x => fns.reduce((y, f) => f(y), x);
+
+export const ADD_VALUE = 'ADD_VALUE';
+export const addingReducer = (state = 0, action = {}) => {
+    const {type, payload} = action;
+
+    switch (type) {
+        case ADD_VALUE:
+            return state + payload.value;
+        default:
+            return state;
+    }
+};
