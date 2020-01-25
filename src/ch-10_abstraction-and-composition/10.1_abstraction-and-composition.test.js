@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import {add, addN, compose, composeRight, filterRed, map, mapRedu} from "./10.1_abstraction_and_composition";
+import {add, addN, compose, composeRight, filterRed, map, mapRedu, pipe} from "./10.1_abstraction_and_composition";
 
 describe("Abstraction and Composition", () => {
     it("should fix a parameter in a function", () => {
@@ -67,5 +67,15 @@ describe("Abstraction and Composition", () => {
 
         expect(composedFn(5)).to.equal(21);
     });
+
+    it("should implement a pipeline of functions with a bottom down pipe", () => {
+        const add1 = x => x + 1;
+        const add5 = x => x + 5;
+        const multiplyWith3 = x => x * 3;
+
+        const pipedFn = pipe(add1, add5, multiplyWith3);
+
+        expect(pipedFn(5)).to.equal(33);
+    })
 
 });
