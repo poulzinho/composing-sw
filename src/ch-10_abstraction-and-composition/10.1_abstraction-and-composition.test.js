@@ -1,5 +1,15 @@
 import {expect} from 'chai';
-import {add, addN, map} from "./10.1_abstraction_and_composition";
+import {
+    add,
+    ADD_VALUE, addingReducer,
+    addN,
+    compose,
+    composeRight,
+    filterRed,
+    map,
+    mapRedu,
+    pipe
+} from "./10.1_abstraction_and_composition";
 
 describe("Abstraction and Composition", () => {
     it("should fix a parameter in a function", () => {
@@ -25,4 +35,67 @@ describe("Abstraction and Composition", () => {
 
         expect(doubleAll([1, 4, 8])).to.deep.equal([2, 8, 16]);
     });
+
+    it("should use a reducer to sum all terms", () => {
+        const sumReducer = (acc, n) => acc + n;
+        const terms = [2, 4, 5];
+
+        expect(terms.reduce(sumReducer, 0)).to.equal(11);
+    });
+
+    it("should implement a map using a reducer", () => {
+        const by2 = (x) => x * 2;
+        const terms = [1, 2, 3, 4];
+
+        expect(mapRedu(by2, terms)).to.deep.equal([2, 4, 6, 8]);
+    });
+
+    it("should implement a filter using a reducer", () => {
+        const gt5 = (x) => x > 5;
+        const terms = [2, 6, 4, 10];
+
+        expect(filterRed(gt5, terms)).to.deep.equal([6, 10]);
+    });
+
+    it("should compose functions using a right to left reducer", () => {
+        const add1 = x => x + 1;
+        const add5 = x => x + 5;
+        const multiplyWith3 = x => x * 3;
+
+        const composedFn = compose(add1, add5, multiplyWith3);
+
+        expect(composedFn(5)).to.equal(21);
+    });
+
+    it("should compose functions with a simple reducer, still right to left", () => {
+
+        const add1 = x => x + 1;
+        const add5 = x => x + 5;
+        const multiplyWith3 = x => x * 3;
+
+        const composedFn = composeRight(add1, add5, multiplyWith3);
+
+        expect(composedFn(5)).to.equal(21);
+    });
+
+    it("should implement a pipeline of functions with a bottom down pipe", () => {
+        const add1 = x => x + 1;
+        const add5 = x => x + 5;
+        const multiplyWith3 = x => x * 3;
+
+        const pipedFn = pipe(add1, add5, multiplyWith3);
+
+        expect(pipedFn(5)).to.equal(33);
+    });
+
+    it("should implement a redux reducer", () => {
+        const actions = [
+            {type: ADD_VALUE, payload: {value: 1}},
+            {type: ADD_VALUE, payload: {value: 1}},
+            {type: ADD_VALUE, payload: {value: 1}},
+        ];
+
+        expect(actions.reduce(addingReducer, 0)).to.equal(3);
+    })
+
 });
