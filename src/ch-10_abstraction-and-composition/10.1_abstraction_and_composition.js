@@ -13,3 +13,5 @@ export const filterRed = (fn, arr) => arr.reduce((acc, item) => {
 }, []);
 
 export const compose = (...fns) => x => fns.reduceRight((y, f) => f(y), x);
+
+export const composeRight = (...fns) => x => fns.reverse().reduce((y, f) => f(y), x);
