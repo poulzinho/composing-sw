@@ -16,3 +16,8 @@ But, not all functors iterate.
 A functor is a mapping between categories (category: collection of objects and arrows between).
 - Identity: 1_A = A -> A
 - Composition: A -> B -> C ... A -> C
+
+* Composition law: 
+```
+mappableObj.map(g).map(f) equivalent to mappableObh.map( x => f(g(x)) );
+```
