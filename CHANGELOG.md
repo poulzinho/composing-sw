@@ -1,3 +1,14 @@
+# [1.22.0](https://github.com/poulzinho/composing-sw/compare/v1.21.0...v1.22.0) (2020-02-08)
+
+
+### Features
+
+* **ch11:** add composition laws, theory ([193148e](https://github.com/poulzinho/composing-sw/commit/193148ea013780623ad904f8df3a4f81b4b49bd2))
+* **ch11:** add custom functor that follows the laws ([729b415](https://github.com/poulzinho/composing-sw/commit/729b415ed8e32004fe0a9f7d3d28f68c3ea536d1))
+* **ch11:** add functors theory and law identity ([7c9f779](https://github.com/poulzinho/composing-sw/commit/7c9f7797fb3bf228ae79d1975c6933700dcae1bf))
+* **ch11:** add generic map that works with all functors ([6376cf6](https://github.com/poulzinho/composing-sw/commit/6376cf6a9cc6d9a39bf7ff63361a9b9db42089ba))
+* **ch11:** ensure function composition law ([73b2fb2](https://github.com/poulzinho/composing-sw/commit/73b2fb23e42f9882f9c992c53addadb1101302d4))
+
 # [1.21.0](https://github.com/poulzinho/composing-sw/compare/v1.20.0...v1.21.0) (2020-01-25)
 
 
