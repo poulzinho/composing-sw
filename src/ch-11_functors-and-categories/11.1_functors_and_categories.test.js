@@ -2,6 +2,7 @@ import {assert, expect} from 'chai';
 import {spy} from "sinon";
 import {trace} from "../ch-09_curry-and-fn-composition/9.1_curry-and-fn-composition";
 import {Identity} from "./11.1_functors_and_categories";
+import {curry} from "../ch-07_fp-intro-to-js/7.1_fp-intro-to-js";
 
 describe("Functors and Categories", () => {
     before(() => {
@@ -58,4 +59,19 @@ describe("Functors and Categories", () => {
         assert(console.log.calledWith('Identity 2 double it and add 1: 6'), 'Not Identity Composition');
         assert(console.log.calledWith('Identity 2 double it and add 1: 6'), 'Not Identity Composition');
     });
+
+    it("should allow to implement a generic map that works with any functor", () => {
+
+        const map = curry((fn, mappable) => mappable.map(fn));
+        const log = x => console.log(x);
+
+        const double = n => n * 2;
+        const mDouble = map(double);
+
+        mDouble(Identity(4)).map(log);
+        mDouble([4]).map(log);
+
+        assert(console.log.calledWith(8), 'Not generic map');
+        assert(console.log.calledWith(8), 'Not generic map');
+    })
 });
