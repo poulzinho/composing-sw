@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import {flatMap} from "./12.1_monads";
+import {flatMap, Monad} from "./12.1_monads";
 
 describe("Monads", () => {
     it("should enable flatMap", () => {
@@ -9,34 +9,21 @@ describe("Monads", () => {
     });
 
     it("should implement a Monad", () => {
-        const Monad = value => ({
-            flatMap: f => {
-                console.log('** flatMap');
-                console.log('-- f', f.toString());
-                console.log('-- value', value);
-                return f(value)
-            },
-            map(f) {
-                console.log('* map');
-                console.log('- f', f.toString());
-                console.log('- value', value);
+        const double = x => x * 2;
+        expect(Monad(21).map(double).flatMap(x => x)).equal(42);
+    });
 
-                return this.flatMap(a => {
-                    console.log('exec flatMap f');
-                    console.log('--- f', f.toString());
-                    console.log('--- a', a);
-                    console.log('--- f(a)', f(a));
-                    console.log('--- Monad.of', Monad.of(f(a)));
-                    return Monad.of(f(a))
-                });
-            }
+    it("should implement the Identity Monad", () => {
+
+        const Id = value => ({
+            map: f => Id.of(f(value)),
+            flatMap: f => f(value),
         });
 
-        Monad.of = x => {
-            console.log('*** Monad(x)', x);
-            return Monad(x)
-        };
+        // Type lift
+        Id.of = Id;
 
-        expect(Monad(21).map(x => x * 2).flatMap(x => x)).equal(42);
+        expect(Id(3).map(x => x * 2).flatMap(x => x)).equal(6);
     });
+
 });
