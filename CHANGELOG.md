@@ -1,3 +1,16 @@
+# [1.23.0](https://github.com/poulzinho/composing-sw/compare/v1.22.0...v1.23.0) (2020-02-16)
+
+
+### Features
+
+* **ch12:** add FlatMap Example ([1d5f42c](https://github.com/poulzinho/composing-sw/commit/1d5f42cda36fd4fc132eaa132e03b1d3b2a1358d))
+* **ch12:** add Indentity Monad ([3de85e0](https://github.com/poulzinho/composing-sw/commit/3de85e0e3fa3ca01df1edcc6166ff4260c8743b1))
+* **ch12:** add Kleisli composition ([2e1b10c](https://github.com/poulzinho/composing-sw/commit/2e1b10c7a98679e643def3d91c387f9158bcfc08))
+* **ch12:** add Monad example ([f977e00](https://github.com/poulzinho/composing-sw/commit/f977e00005648558fb2675e69356c5b467eeb856))
+* **ch12:** add Monads theory ([c9e3f12](https://github.com/poulzinho/composing-sw/commit/c9e3f1261ae45b59368ecea98b098fb681fc78ff))
+* **ch12:** prove monad laws ([e63a293](https://github.com/poulzinho/composing-sw/commit/e63a293f66d602d934b0a01162d0bd3f6d7f8c76))
+* **ch13:** add history of OOP ([d5a44bc](https://github.com/poulzinho/composing-sw/commit/d5a44bc9807c58cad77e446e1c81e5f2046e966c))
+
 # [1.22.0](https://github.com/poulzinho/composing-sw/compare/v1.21.0...v1.22.0) (2020-02-08)
 
 
