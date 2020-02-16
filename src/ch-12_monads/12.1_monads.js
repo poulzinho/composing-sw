@@ -29,7 +29,18 @@ export const Monad = value => ({
     }
 });
 
+// Type lift
 Monad.of = x => {
     // console.log('*** Monad(x)', x);
     return Monad(x)
 };
+
+
+export const IdMonad = value => ({
+    map: f => IdMonad.of(f(value)),
+    flatMap: f => f(value),
+    toString: () => `IdMonad(${value})`,
+});
+
+// Type lift
+IdMonad.of = IdMonad;

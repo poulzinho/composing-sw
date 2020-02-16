@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import {flatMap, Monad} from "./12.1_monads";
+import {flatMap, Monad, IdMonad} from "./12.1_monads";
 
 describe("Monads", () => {
     it("should enable flatMap", () => {
@@ -35,16 +35,24 @@ describe("Monads", () => {
     });
 
     it("should implement the Identity Monad", () => {
+        const double = x => x * 2;
+        expect(IdMonad(3).map(double).flatMap(x => x)).equal(6);
+    });
 
-        const Id = value => ({
-            map: f => Id.of(f(value)),
-            flatMap: f => f(value),
-        });
+    it("should prove that Identity Monad follows the monad laws", () => {
+        const g = n => IdMonad(n + 1);
+        const f = n => IdMonad(n * 2);
 
-        // Type lift
-        Id.of = Id;
+        // Left Identity
+        expect(IdMonad(20).flatMap(f).toString()).equal(f(20).toString());
 
-        expect(Id(3).map(x => x * 2).flatMap(x => x)).equal(6);
+        // Right Identity
+        expect(IdMonad(20).flatMap(IdMonad.of).toString())
+            .equal(IdMonad(20).toString());
+
+        // Associativity
+        expect(IdMonad(20).flatMap(g).flatMap(f).toString())
+            .equal(IdMonad(20).flatMap(x => g(x).flatMap(f)).toString());
     });
 
 });
