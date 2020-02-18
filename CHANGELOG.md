@@ -1,3 +1,14 @@
+# [1.24.0](https://github.com/poulzinho/composing-sw/compare/v1.23.0...v1.24.0) (2020-02-18)
+
+
+### Features
+
+* **ch14:** add basic object composition with a reducer ([3932636](https://github.com/poulzinho/composing-sw/commit/393263622a6103eff946a258da79ade4e386690f))
+* **ch14:** add object Aggregation ([f470ab4](https://github.com/poulzinho/composing-sw/commit/f470ab48fac59efe1d7c7cfde3da3edd4259efb7))
+* **ch14:** add object composition theory ([d81b89f](https://github.com/poulzinho/composing-sw/commit/d81b89fdc37110c3d1f606889b9bc35e8f393a42))
+* **ch14:** add object Concatenation ([26c1729](https://github.com/poulzinho/composing-sw/commit/26c1729fd41c526adfea5894102253b4ece7fe10))
+* **ch14:** add object Delegation ([6f41f6f](https://github.com/poulzinho/composing-sw/commit/6f41f6f796d26a8748afef8aa4be5ae9233c9b00))
+
 # [1.23.0](https://github.com/poulzinho/composing-sw/compare/v1.22.0...v1.23.0) (2020-02-16)
 
 
