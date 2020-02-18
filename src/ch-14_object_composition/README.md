@@ -11,6 +11,6 @@ Class inheritance is the strongest kind of coupling in OO Design.
 
 ## Main forms of Object Composition
 - **Aggregation**. An Object that contains other objects. Each subobject can be destructured from the parent. 
-- **Concatenation**.
+- **Concatenation**. Adding new properties to an existing object.
 - **Delegation**.
 
