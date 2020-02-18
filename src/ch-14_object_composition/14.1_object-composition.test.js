@@ -41,7 +41,7 @@ describe("Object Composition", () => {
         );
     });
 
-    it("should describe concatenation", () => {
+    it("should describe Concatenation", () => {
 
         const concat = (acum, curr) => ({...acum, ...curr});
 
@@ -50,5 +50,15 @@ describe("Object Composition", () => {
         // last-in wins
         expect(concatenate).to.deep.equal({a: "a", b: "cb", c: "c"});
     });
+
+    it("should describe Delegation", () => {
+
+        const deleg = (acum, curr) => Object.assign(Object.create(acum), curr);
+
+        const delegate = objs.reduceRight(deleg, {});
+
+        expect(Object.keys(delegate)).to.deep.equal(["a", "b"]);
+        expect(delegate.c).equal("c");
+    })
 
 });
