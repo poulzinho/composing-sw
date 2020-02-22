@@ -25,6 +25,23 @@ describe("Factory Functions", () => {
 
         expect(aUser.userName).equal("Polo");
         expect(aUser.avatar).equal("polo.png");
-    })
+    });
+
+    it("should support factory functions to create many user objects", () => {
+
+        const createUser = ({userName, avatar}) => ({
+            userName,
+            avatar,
+            setUserName(username) {
+                this.userName = username;
+                return this;
+            },
+        });
+
+        const aUser = createUser({userName: "Polo", avatar: "polo.png"});
+
+        expect(aUser.userName).equal("Polo");
+        expect(aUser.avatar).equal("polo.png");
+    });
 
 });
