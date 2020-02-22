@@ -44,4 +44,19 @@ describe("Factory Functions", () => {
         expect(aUser.avatar).equal("polo.png");
     });
 
+    it("should support factory functions with default parameters", () => {
+        const createUser = ({
+            userName = "anon",
+            avatar = "anon.png"
+        } = {}) => ({
+            userName,
+            avatar,
+        });
+
+        const aUser = createUser();
+
+        expect(aUser.userName).equal("anon");
+        expect(aUser.avatar).equal("anon.png");
+    });
+
 });
