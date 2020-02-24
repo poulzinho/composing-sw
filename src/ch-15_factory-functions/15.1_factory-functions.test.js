@@ -103,15 +103,12 @@ describe("Factory Functions", () => {
 
         const myDrone = createDrone({capacity: '5500mAh'});
 
-        console.log('my drone', myDrone.toString());
-
         expect(myDrone.fly().isFlying()).to.be.true;
         expect(myDrone.land().isFlying()).to.be.false;
         expect(myDrone.getCapacity()).to.equal("5500mAh");
         expect(myDrone.draw(50).getCharge()).equal(50);
         expect(myDrone.draw(75).getCharge()).equal(0);
         expect(myDrone.constructor).to.deep.equal(createDrone);
-
     });
 
 });
