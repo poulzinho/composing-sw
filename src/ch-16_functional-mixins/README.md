@@ -17,3 +17,6 @@ Apps are a composition of the atomic units.
 
 ## Mixins
 Features get mixed into a composite object.
+
+## Functional Inheritance
+Applying an augmenting function to an object.

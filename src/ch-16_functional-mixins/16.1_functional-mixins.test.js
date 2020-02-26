@@ -22,4 +22,29 @@ describe("Functional Mixins", () => {
         expect(iceCream.hasStrawberry()).to.be.true;
         expect(iceCream.hasCaramel()).to.be.true;
     });
+
+    it("should describe functional inheritance", () => {
+
+        const base = (spec) => {
+            const that = {};
+            that.name = spec.name;
+
+            return that;
+        };
+
+        const child = (spec) => {
+            // create object through the base
+            const that = base(spec);
+
+            that.sayHello = () => {
+                return `Hello, I am ${that.name}`;
+            };
+
+            return that;
+        };
+
+        const result = child({name: 'a functional inheritance'});
+
+        expect(result.sayHello()).equal("Hello, I am a functional inheritance");
+    })
 });
