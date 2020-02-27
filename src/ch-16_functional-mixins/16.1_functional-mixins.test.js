@@ -46,5 +46,28 @@ describe("Functional Mixins", () => {
         const result = child({name: 'a functional inheritance'});
 
         expect(result.sayHello()).equal("Hello, I am a functional inheritance");
-    })
+    });
+
+    it("should describe functional mixins", () => {
+        const flying = obj => {
+            let isFlying = false;
+
+            return Object.assign({}, obj, {
+                fly() {
+                    isFlying = true;
+                    return this;
+                },
+                isFlying: () => isFlying,
+                land() {
+                    isFlying = false;
+                    return this;
+                }
+            });
+        };
+
+        const bird = flying({});
+
+        expect(bird.isFlying()).to.be.false;
+        expect(bird.fly().isFlying()).to.be.true;
+    });
 });
