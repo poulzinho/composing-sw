@@ -74,4 +74,39 @@ describe("Functional Mixins", () => {
         expect(duck.fly().quack()).equal("Quack!");
     });
 
+    it("should enable implicit dependencies", () => {
+        const withLogging = logger => obj => Object.assign({}, obj, {
+            log(text) {
+                logger(text)
+            }
+        });
+
+        const withConfig = config => (obj = {
+            log: (text = "") => console.log(text)
+        }) => Object.assign({}, obj, {
+            get(key) {
+                return config[key] === undefined
+                    ? this.log(`Missing config key: ${key}`)
+                    : config[key];
+            }
+        });
+
+        const createConfig = ({initialConfig, logger}) => pipe(
+            withLogging(logger),
+            withConfig(initialConfig),
+        )({});
+
+        const initialConfig = {
+            host: "localhost"
+        };
+
+        const logger = console.log.bind(console);
+
+        const config = createConfig({initialConfig, logger});
+
+        expect(config.get("host")).equal("localhost");
+        expect(config.get("notThere")).equal(undefined);
+
+    });
+
 });
