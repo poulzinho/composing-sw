@@ -1,3 +1,19 @@
+# [1.25.0](https://github.com/poulzinho/composing-sw/compare/v1.24.0...v1.25.0) (2020-02-29)
+
+
+### Features
+
+* **ch15:** add factory functions theory, and a basic example ([34ee870](https://github.com/poulzinho/composing-sw/commit/34ee870ea5102ad5b0be90915172dfe9b1d6a2d1))
+* **ch15:** support factory functions ([2d776d5](https://github.com/poulzinho/composing-sw/commit/2d776d5201f1ca3960301265293f27d925773b6a))
+* **ch15:** support factory functions for mixin composition ([e36b0f7](https://github.com/poulzinho/composing-sw/commit/e36b0f7b1cd1f13db6abb0d00e994e8649188c58))
+* **ch15:** support factory functions with default params ([a1f31e0](https://github.com/poulzinho/composing-sw/commit/a1f31e0e7ca65947721eaf8a37bf89c892c50a36))
+* **ch16:** add functional inheritance ([cd61beb](https://github.com/poulzinho/composing-sw/commit/cd61beb4ffb45b3f5da7d8829d3e2dadf7309ef0))
+* **ch16:** add functional mixins ([e90e223](https://github.com/poulzinho/composing-sw/commit/e90e22393eb3e5aae98154b2e6f588fb21abf208))
+* **ch16:** add functional mixins composition ([9598d93](https://github.com/poulzinho/composing-sw/commit/9598d930bf9abcc17284f503611baaca23278bee))
+* **ch16:** add mixins theory, add object mixins example ([2ea0134](https://github.com/poulzinho/composing-sw/commit/2ea0134a06af906ed953bfd1389297ffe15c1b48))
+* **ch16:** enable explicit dependencies ([99bfe18](https://github.com/poulzinho/composing-sw/commit/99bfe18b5adbcb970c08eb86ea5085ef9994d764))
+* **ch16:** enable implicit dependencies ([677fe0b](https://github.com/poulzinho/composing-sw/commit/677fe0b72fa2c868d311c257756fdab4267b7391))
+
 # [1.24.0](https://github.com/poulzinho/composing-sw/compare/v1.23.0...v1.24.0) (2020-02-18)
 
 
