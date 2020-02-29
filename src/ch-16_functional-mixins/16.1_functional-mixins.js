@@ -13,3 +13,9 @@ export const flying = obj => {
         }
     });
 };
+
+export const withLogging = logger => obj => Object.assign({}, obj, {
+    log(text) {
+        logger(text)
+    }
+});

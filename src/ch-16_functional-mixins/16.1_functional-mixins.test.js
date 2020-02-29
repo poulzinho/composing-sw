@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import {flying} from "./16.1_functional-mixins";
+import {flying, withLogging} from "./16.1_functional-mixins";
 import {pipe} from "../ch-10_abstraction-and-composition/10.1_abstraction_and_composition";
 
 describe("Functional Mixins", () => {
@@ -75,12 +75,7 @@ describe("Functional Mixins", () => {
     });
 
     it("should enable implicit dependencies", () => {
-        const withLogging = logger => obj => Object.assign({}, obj, {
-            log(text) {
-                logger(text)
-            }
-        });
-
+        // see here the default value log
         const withConfig = config => (obj = {
             log: (text = "") => console.log(text)
         }) => Object.assign({}, obj, {
@@ -106,7 +101,34 @@ describe("Functional Mixins", () => {
 
         expect(config.get("host")).equal("localhost");
         expect(config.get("notThere")).equal(undefined);
+    });
 
+    it("should enable explicit dependencies", () => {
+        const addConfig = config => obj => Object.assign({}, obj, {
+            get(key) {
+                return config[key] === undefined
+                    ? this.log(`Missing config key: ${key}`)
+                    : config[key]
+            }
+        });
+
+        const withConfig = ({initialConfig, logger}) => obj => pipe(
+            withLogging(logger),
+            addConfig(initialConfig)
+        )(obj);
+
+        const createConfig = ({initialConfig, logger}) => withConfig({initialConfig, logger})({});
+
+        const initialConfig = {
+            host: "localhost"
+        };
+
+        const logger = console.log.bind(console);
+
+        const config = createConfig({initialConfig, logger});
+
+        expect(config.get("host")).equal("localhost");
+        expect(config.get("unknown")).equal(undefined);
     });
 
 });
