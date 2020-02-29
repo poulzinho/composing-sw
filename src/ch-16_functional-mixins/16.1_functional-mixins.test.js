@@ -1,4 +1,6 @@
 import {expect} from 'chai';
+import {flying} from "./16.1_functional-mixins";
+import {pipe} from "../ch-10_abstraction-and-composition/10.1_abstraction_and_composition";
 
 describe("Functional Mixins", () => {
 
@@ -49,25 +51,27 @@ describe("Functional Mixins", () => {
     });
 
     it("should describe functional mixins", () => {
-        const flying = obj => {
-            let isFlying = false;
-
-            return Object.assign({}, obj, {
-                fly() {
-                    isFlying = true;
-                    return this;
-                },
-                isFlying: () => isFlying,
-                land() {
-                    isFlying = false;
-                    return this;
-                }
-            });
-        };
-
         const bird = flying({});
 
         expect(bird.isFlying()).to.be.false;
         expect(bird.fly().isFlying()).to.be.true;
     });
+
+    it("should compose functional mixins", () => {
+        const quacking = quack => obj => Object.assign({}, obj, {
+            quack: () => quack
+        });
+
+        const quacker = quacking('Quack!')({});
+        expect(quacker.quack()).equal("Quack!");
+
+        // const createDuck = quack => quacking(quack)(flying({}));
+
+        // using a pipe
+        const createDuck = quack => pipe(flying, quacking(quack))({});
+
+        const duck = createDuck('Quack!');
+        expect(duck.fly().quack()).equal("Quack!");
+    });
+
 });
