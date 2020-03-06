@@ -21,3 +21,7 @@ does not reference the same object in memory that the instance (prototype) is re
 Avoid reassigning the Constructor.prototype.
 
 Also, instanceof is just a nominal type check (not structural).
+
+## The .constructor
+Do not use it for type checking.
+Do not assume that the "new" keyword is going to work with the constructor's factory function.

@@ -1,4 +1,4 @@
-import {expect} from 'chai';
+import {assert, expect} from 'chai';
 
 describe("Composition is harder with Classes", () => {
     it("should show the problem of reassigning the prototype", () => {
@@ -26,5 +26,24 @@ describe("Composition is harder with Classes", () => {
             username: "Polo",
             avatar: "polo.png",
         })
-    })
+    });
+
+    it("should return an empty instance of an object type", () => {
+        const empty = ({constructor} = {}) => {
+            console.log('this is the constructor', constructor);
+            return constructor ? new constructor() : undefined
+        };
+
+        const array = [20];
+        const promise = Promise.resolve(10);
+
+        expect(empty(array)).deep.equal([]);
+
+        assert.throw(
+            () => empty(promise),
+            TypeError,
+            "Promise resolver undefined is not a function"
+        );
+
+    });
 });
