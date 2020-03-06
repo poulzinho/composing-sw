@@ -1,3 +1,15 @@
+# [1.26.0](https://github.com/poulzinho/composing-sw/compare/v1.25.0...v1.26.0) (2020-03-06)
+
+
+### Features
+
+* **ch17:** add .constructor to proto ([86961d0](https://github.com/poulzinho/composing-sw/commit/86961d0b990dc6c78c71707f1e379052cf08cf95))
+* **ch17:** add constructor.of example ([45455d8](https://github.com/poulzinho/composing-sw/commit/45455d8175f8aab9956957357488501779c8d514))
+* **ch17:** add examples with the .constructor property ([f9bf827](https://github.com/poulzinho/composing-sw/commit/f9bf827798af02507d9d64379e17de956e48118e))
+* **ch17:** add problems with reassigning prototype ([b3b50a3](https://github.com/poulzinho/composing-sw/commit/b3b50a31e1f8504226830ab9e8c3fb1f547477a5))
+* **ch17:** add support for .of to factories ([96023df](https://github.com/poulzinho/composing-sw/commit/96023dfead1b9e178bdb89255596fd3a3497ce05))
+* **ch17:** add theory for why composition is hard with classes ([d540c7e](https://github.com/poulzinho/composing-sw/commit/d540c7e01c4269dcfd443ef47116c1dd466f8854))
+
 # [1.25.0](https://github.com/poulzinho/composing-sw/compare/v1.24.0...v1.25.0) (2020-02-29)
 
 
