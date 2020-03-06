@@ -56,4 +56,30 @@ describe("Composition is harder with Classes", () => {
         expect(empty(promise)).to.be.undefined;
     });
 
+    it("should add support for .of to factories", () => {
+        const createUser = ({
+            userName = "default",
+            avatar = "default.png"
+        } = {}) => ({
+            userName,
+            avatar,
+            constructor: createUser
+        });
+
+        createUser.of = createUser;
+
+        const empty = ({constructor} = {}) => constructor.of ? constructor.of() : undefined;
+
+        const aUser = createUser({userName: "polo", avatar: "polo.png"});
+
+        expect(empty(aUser)).deep.equal({
+            constructor: createUser,
+            userName: "default",
+            avatar: "default.png",
+        });
+
+        expect(aUser.constructor).equal(createUser.of);
+        expect(createUser.of).equal(createUser);
+    });
+
 });
