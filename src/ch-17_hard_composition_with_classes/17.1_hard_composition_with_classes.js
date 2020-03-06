@@ -44,6 +44,16 @@ describe("Composition is harder with Classes", () => {
             TypeError,
             "Promise resolver undefined is not a function"
         );
-
     });
+
+    it("should return an empty instance of any object type", () => {
+        const empty = ({constructor} = {}) => constructor.of ? constructor.of() : undefined;
+
+        const array = [22];
+        const promise = Promise.resolve(20);
+
+        expect(empty(array));
+        expect(empty(promise)).to.be.undefined;
+    });
+
 });
