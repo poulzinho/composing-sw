@@ -57,10 +57,11 @@ describe("Composition is harder with Classes", () => {
     });
 
     it("should add support for .of to factories", () => {
-        const createUser = ({
-            userName = "default",
-            avatar = "default.png"
-        } = {}) => ({
+        const createUser = (
+            {
+                userName = "default",
+                avatar = "default.png"
+            } = {}) => ({
             userName,
             avatar,
             constructor: createUser
@@ -80,6 +81,35 @@ describe("Composition is harder with Classes", () => {
 
         expect(aUser.constructor).equal(createUser.of);
         expect(createUser.of).equal(createUser);
+    });
+
+    it("should make a constructor non-enumerable", () => {
+
+        const createUser = (
+            {
+                userName = "default",
+                avatar = "default.png"
+            } = {}) => ({
+            __proto__: {
+                constructor: createUser
+            },
+            userName,
+            avatar,
+        });
+
+        createUser.of = createUser;
+
+        const aUser = createUser({userName: "polo", avatar: "polo.png"});
+
+        const empty = ({constructor} = {}) => constructor.of ? constructor.of() : undefined;
+
+        expect(empty(aUser)).deep.equal({
+            __proto__: {
+                constructor: createUser
+            },
+            userName: "default",
+            avatar: "default.png",
+        });
     });
 
 });
