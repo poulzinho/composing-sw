@@ -1,3 +1,12 @@
+# [1.27.0](https://github.com/poulzinho/composing-sw/compare/v1.26.0...v1.27.0) (2020-03-07)
+
+
+### Features
+
+* **ch18:** add a factory of numerical data types ([096d9be](https://github.com/poulzinho/composing-sw/commit/096d9be7b3e4b2746694783e4fbdffbe96ac48ed))
+* **ch18:** add a pipeline for composable custom data types ([7edf1a9](https://github.com/poulzinho/composing-sw/commit/7edf1a9786a52b0270456d41404e4b2dd0e305ec))
+* **ch18:** add custom data types theory ([66282f4](https://github.com/poulzinho/composing-sw/commit/66282f41e70bee02257f34bf401cd9d0d5e3d377))
+
 # [1.26.0](https://github.com/poulzinho/composing-sw/compare/v1.25.0...v1.26.0) (2020-03-06)
 
 
