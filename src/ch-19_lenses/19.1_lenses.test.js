@@ -1,5 +1,7 @@
 import {expect} from 'chai';
 import {over, lens, set, view} from "./19.1_lenses";
+import {curry} from "../ch-07_fp-intro-to-js/7.1_fp-intro-to-js";
+import {compose} from "../ch-10_abstraction-and-composition/10.1_abstraction_and_composition";
 
 describe("Lenses", () => {
     it("should describe lenses' getters and setters", () => {
@@ -96,6 +98,30 @@ describe("Lenses", () => {
         const aLens = lens('a');
 
         expect(over(aLens, id, initialStore)).deep.equal(initialStore);
+    });
+
+    it("should demonstrate that the over operator follows the functor composition laws", () => {
+        const overCurry = curry(
+            (lens, f, store) => set(lens, f(view(lens, store)), store)
+        );
+
+        const initialStore = {
+            a: 20
+        };
+
+        const aLens = lens('a');
+
+        const add1 = n => n + 1;
+        const double = n => n * 2;
+
+        const a = compose(
+            overCurry(aLens, add1),
+            overCurry(aLens, double),
+        );
+
+        const b = overCurry(aLens, compose(add1, double));
+
+        expect(a(initialStore)).deep.equal(b(initialStore));
     });
 
 });
