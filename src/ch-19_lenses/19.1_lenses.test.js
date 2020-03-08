@@ -1,4 +1,5 @@
 import {expect} from 'chai';
+import {lens, set, view} from "./19.1_lenses";
 
 describe("Lenses", () => {
     it("should describe lenses' getters and setters", () => {
@@ -18,19 +19,6 @@ describe("Lenses", () => {
     });
 
     it("should use pure functions to view and set with lenses", () => {
-        // pure functions
-        const view = (lens, store) => lens.view(store);
-        const set = (lens, value, store) => lens.set(value, store);
-
-        // lens function returns accessors for a prop
-        const lens = prop => ({
-            view: store => store[prop],
-            set: (value, store) => ({
-                ...store,
-                [prop]: value
-            })
-        });
-
         // object to be accessed with a lens
         const initialStore = {
             a: "polo",
@@ -48,5 +36,38 @@ describe("Lenses", () => {
         const finalStore = set(aLens, 'paulo', initialStore);
         expect(view(aLens, finalStore)).equal('paulo');
     });
+
+    it("should follow the lens laws", () => {
+        const initialStore = {
+            a: "polo",
+            b: "zaky",
+        };
+
+        const aLens = lens('a');
+
+        // view(lens, set(lens, value, store)) === value
+        expect(view(aLens, set(aLens, 'paulo', initialStore))).equal('paulo');
+
+        const store1 = set(aLens, 'mike', set(aLens, 'paul', initialStore));
+        const store2 = set(aLens, 'mike', initialStore);
+
+        // set(lens, b, set(lens, a, store)) === set(lens, b, store)
+        expect(store1).deep.equal({
+            a: "mike",
+            b: "zaky",
+        });
+
+        expect(store2).deep.equal({
+            a: "mike",
+            b: "zaky",
+        });
+
+        expect(store1).deep.equal(store2);
+
+        // set(lens, view(lens, store), store) === store
+        const store3 = set(aLens, view(aLens, initialStore), initialStore);
+        expect(store3).deep.equal(initialStore);
+
+    })
 
 });
