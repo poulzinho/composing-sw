@@ -9,3 +9,5 @@ export const lens = prop => ({
         [prop]: value
     })
 });
+
+export const over = (lens, f, store) => set(lens, f(view(lens, store)), store);

@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import {lens, set, view} from "./19.1_lenses";
+import {over, lens, set, view} from "./19.1_lenses";
 
 describe("Lenses", () => {
     it("should describe lenses' getters and setters", () => {
@@ -70,8 +70,6 @@ describe("Lenses", () => {
     });
 
     it("should describe the lens map operation: over", () => {
-        const over = (lens, f, store) => set(lens, f(view(lens, store)), store);
-
         const uppercase = x => x.toUpperCase();
 
         const initialStore = {
@@ -85,6 +83,19 @@ describe("Lenses", () => {
             a: "POLO",
             b: "zaky",
         });
-    })
+    });
+
+    it("should demonstrate that the over operator follows the functor laws", () => {
+        const id = x => x;
+
+        const initialStore = {
+            a: "polo",
+            b: "zaky",
+        };
+
+        const aLens = lens('a');
+
+        expect(over(aLens, id, initialStore)).deep.equal(initialStore);
+    });
 
 });
