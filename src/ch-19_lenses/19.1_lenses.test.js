@@ -67,7 +67,24 @@ describe("Lenses", () => {
         // set(lens, view(lens, store), store) === store
         const store3 = set(aLens, view(aLens, initialStore), initialStore);
         expect(store3).deep.equal(initialStore);
+    });
 
+    it("should describe the lens map operation: over", () => {
+        const over = (lens, f, store) => set(lens, f(view(lens, store)), store);
+
+        const uppercase = x => x.toUpperCase();
+
+        const initialStore = {
+            a: "polo",
+            b: "zaky",
+        };
+
+        const aLens = lens('a');
+
+        expect(over(aLens, uppercase, initialStore)).deep.equal({
+            a: "POLO",
+            b: "zaky",
+        });
     })
 
 });
