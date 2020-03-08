@@ -1,3 +1,17 @@
+# [1.28.0](https://github.com/poulzinho/composing-sw/compare/v1.27.0...v1.28.0) (2020-03-08)
+
+
+### Features
+
+* **ch19:** add lens laws examples ([f60f1b7](https://github.com/poulzinho/composing-sw/commit/f60f1b7371091e3abb6b5ea79cce7e4d565cef4b))
+* **ch19:** add lens laws theory ([8598ea5](https://github.com/poulzinho/composing-sw/commit/8598ea552bc5c900ab137f3983f1c7a8e1efa777))
+* **ch19:** add lenses getters examples ([62d34d6](https://github.com/poulzinho/composing-sw/commit/62d34d6c57d5039315b5288606d6704c249f4731))
+* **ch19:** add lenses theory ([669712e](https://github.com/poulzinho/composing-sw/commit/669712ee5cf5aec642d96acd9ac64bff8324b53c))
+* **ch19:** add overCurry, prove that it follows the functor comp laws ([ec04446](https://github.com/poulzinho/composing-sw/commit/ec044461aefe078f37200dd8aa7fb5bed46dff77))
+* **ch19:** add pure functions to view and set with lenses ([b81412e](https://github.com/poulzinho/composing-sw/commit/b81412efa47c4b31a677aed362f25a563488934f))
+* **ch19:** describe the over, lens' map operation ([88cc667](https://github.com/poulzinho/composing-sw/commit/88cc667142e44ba7c64029647dc52ca129f9f2ea))
+* **ch19:** prove that over operator follows functor laws ([c37d66a](https://github.com/poulzinho/composing-sw/commit/c37d66ad33e4054156e78e5f5266de75595b6444))
+
 # [1.27.0](https://github.com/poulzinho/composing-sw/compare/v1.26.0...v1.27.0) (2020-03-07)
 
 
