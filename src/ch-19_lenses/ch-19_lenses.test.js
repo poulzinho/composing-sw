@@ -11,4 +11,10 @@ describe("Lenses", () => {
         expect(getZ([100, 200, 1000])).equal(1000);
     });
 
+    it("should describe lenses' setters", () => {
+        const setY = ([x, _, z]) => y => [x, y, z];
+
+        expect(setY([10, 20, 30])(2000)).deep.equal([10, 2000, 30]);
+    });
+
 });
