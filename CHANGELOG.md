@@ -1,3 +1,13 @@
+# [1.29.0](https://github.com/poulzinho/composing-sw/compare/v1.28.0...v1.29.0) (2020-03-10)
+
+
+### Features
+
+* **ch20:** add tranducer rules ([8e20e56](https://github.com/poulzinho/composing-sw/commit/8e20e5691f90e5ce06ddad9a6d42e3399c52fc44))
+* **ch20:** add transducer example ([501b91c](https://github.com/poulzinho/composing-sw/commit/501b91c7e9be290cf68314e4f69d3d000571fcf3))
+* **ch20:** add transducers theory ([af4e8af](https://github.com/poulzinho/composing-sw/commit/af4e8af42841f1b8928edf1a8f46150696afcbbf))
+* **ch20:** apply transducer ([d2d4330](https://github.com/poulzinho/composing-sw/commit/d2d4330af24ef6f9d2ed5e4ae9121474d3c2b158))
+
 # [1.28.0](https://github.com/poulzinho/composing-sw/compare/v1.27.0...v1.28.0) (2020-03-08)
 
 
